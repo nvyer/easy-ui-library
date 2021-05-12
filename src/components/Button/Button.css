@@ -29,26 +29,34 @@
   color: var(--white);
 }
 
-.btn--primary--normal:hover {
+.btn--primary--normal:disabled {
+  opacity: 0.3;
+}
+
+.btn--primary--normal:hover:enabled {
   transform: translateY(-1px);
   background-color: var(--primary--normal--hover);
 }
 
-.btn--primary--normal:active {
+.btn--primary--normal:active:enabled {
   background-color: var(--primary--normal--active);
 }
 
-.btn--primary--destructive {
+.btn--primary--destructive:enabled {
   background-color: var(--primary--destructive);
   color: var(--white);
 }
 
-.btn--primary--destructive:hover {
+.btn--primary--destructive:disabled {
+  opacity: 0.3;
+}
+
+.btn--primary--destructive:hover:enabled {
   transform: translateY(-1px);
   background-color: var(--primary--destructive--hover);
 }
 
-.btn--primary--destructive:active {
+.btn--primary--destructive:active:enabled {
   background-color: var(--primary--destructive--active);
 }
 
@@ -58,12 +66,16 @@
   color: var(--secondary--normal);
 }
 
-.btn--secondary--normal:hover {
+.btn--secondary--normal:disabled {
+  opacity: 0.3;
+}
+
+.btn--secondary--normal:hover:enabled {
   transform: translateY(-1px);
   background-color: var(--secondary--normal--hover);
 }
 
-.btn--secondary--normal:active {
+.btn--secondary--normal:active:enabled {
   background-color: var(--secondary--normal--active);
 }
 
@@ -73,11 +85,15 @@
   color: var(--secondary--destructive);
 }
 
-.btn--secondary--destructive:hover {
+.btn--secondary--destructive:disabled {
+  opacity: 0.3;
+}
+
+.btn--secondary--destructive:hover:enabled {
   transform: translateY(-1px);
   background-color: var(--secondary--destructive--hover);
 }
 
-.btn--secondary--destructive:active {
+.btn--secondary--destructive:active:enabled {
   background-color: var(--secondary--destructive--active);
 }
