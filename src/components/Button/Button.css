@@ -1,11 +1,15 @@
 :root {
-  --primary--normall: #4528ffce;
-  --primary--normall--hover: #4528ff;
-  --primary--normall--active: #3825af;
+  --primary--normal: #4528ffce;
+  --primary--normal--hover: #4528ff;
+  --primary--normal--active: #3825af;
   --primary--destructive: #eb3e27be;
   --primary--destructive--hover: #eb3e27e7;
   --primary--destructive--active: #f81e01;
+  --secondary--normal: #0000ff;
+  --secondary--normal--hover: #0000ff1f;
+  --secondary--normal--active: #0000ff3f;
   --white: #fff;
+  --blue: #0000ffa6;
 }
 
 .btn {
@@ -16,18 +20,18 @@
   padding: 8px 14px;
   border: none;
 }
-.btn--primary--normall {
-  background-color: var(--primary--normall);
+.btn--primary--normal {
+  background-color: var(--primary--normal);
   color: var(--white);
 }
 
-.btn--primary--normall:hover {
+.btn--primary--normal:hover {
   transform: translateY(-1px);
-  background-color: var(--primary--normall--hover);
+  background-color: var(--primary--normal--hover);
 }
 
-.btn--primary--normall:active {
-  background-color: var(--primary--normall--active);
+.btn--primary--normal:active {
+  background-color: var(--primary--normal--active);
 }
 
 .btn--primary--destructive {
@@ -42,4 +46,19 @@
 
 .btn--primary--destructive:active {
   background-color: var(--primary--destructive--active);
+}
+
+.btn--secondary--normal {
+  background-color: var(--white);
+  border: 1px solid var(--blue);
+  color: var(--secondary--normal);
+}
+
+.btn--secondary--normal:hover {
+  transform: translateY(-1px);
+  background-color: var(--secondary--normal--hover);
+}
+
+.btn--secondary--normal:active {
+  background-color: var(--secondary--normal--active);
 }

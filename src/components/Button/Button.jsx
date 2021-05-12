@@ -2,16 +2,21 @@ import React from "react";
 
 import "./Button.css";
 
-const STYLES = ["btn--primary--normall", "btn--primary--destructive"]
-
+const STYLES = [
+  "btn--primary--normal",
+  "btn--primary--destructive",
+  "btn--secondary--normal",
+];
 
 const Button = ({ children, onClick, buttonStyle, disabled }) => {
-  const checkBtnStyle = STYLES.includes(buttonStyle) 
-  ? buttonStyle 
-  : STYLES[0];
+  const checkBtnStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
 
   return (
-    <button className={`btn ${checkBtnStyle}`} onClick={onClick} disabled={disabled}>
+    <button
+      className={`btn ${checkBtnStyle}`}
+      onClick={onClick}
+      disabled={disabled}
+    >
       {children}
     </button>
   );
