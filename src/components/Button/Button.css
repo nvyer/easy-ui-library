@@ -1,0 +1,30 @@
+:root {
+  --primary--normall: #4528ffce;
+  --primary--normall--hover: #4528ff;
+  --primary--normall--active: #3825af;
+  --primary--destructive: #eb3f27;
+  --white: #fff;
+}
+
+.btn {
+  font-weight: 400;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 8px 14px;
+  border: none;
+}
+.btn--primary--normall {
+  background-color: var(--primary--normall);
+  color: var(--white);
+  border: none;
+}
+
+.btn--primary--normall:hover {
+  transform: translateY(-1px);
+  background-color: var(--primary--normall--hover);
+}
+
+.btn--primary--normall:active {
+  background-color: var(--primary--normall--active);
+}
