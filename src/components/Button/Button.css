@@ -2,7 +2,9 @@
   --primary--normall: #4528ffce;
   --primary--normall--hover: #4528ff;
   --primary--normall--active: #3825af;
-  --primary--destructive: #eb3f27;
+  --primary--destructive: #eb3e27be;
+  --primary--destructive--hover: #eb3e27e7;
+  --primary--destructive--active: #f81e01;
   --white: #fff;
 }
 
@@ -17,7 +19,6 @@
 .btn--primary--normall {
   background-color: var(--primary--normall);
   color: var(--white);
-  border: none;
 }
 
 .btn--primary--normall:hover {
@@ -27,4 +28,18 @@
 
 .btn--primary--normall:active {
   background-color: var(--primary--normall--active);
+}
+
+.btn--primary--destructive {
+  background-color: var(--primary--destructive);
+  color: var(--white);
+}
+
+.btn--primary--destructive:hover {
+  transform: translateY(-1px);
+  background-color: var(--primary--destructive--hover);
+}
+
+.btn--primary--destructive:active {
+  background-color: var(--primary--destructive--active);
 }
