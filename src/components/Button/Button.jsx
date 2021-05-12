@@ -8,6 +8,7 @@ const STYLES = [
   "btn--secondary--normal",
   "btn--secondary--destructive",
   "btn--subtle--normal",
+  "btn--subtle--destructive",
 ];
 
 const Button = ({ children, onClick, buttonStyle, disabled }) => {
