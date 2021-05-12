@@ -8,8 +8,12 @@
   --secondary--normal: #0000ff;
   --secondary--normal--hover: #0000ff1f;
   --secondary--normal--active: #0000ff3f;
+  --secondary--destructive: #ff0000;
+  --secondary--destructive--hover: #ff000011;
+  --secondary--destructive--active: #ff000038;
   --white: #fff;
   --blue: #0000ffa6;
+  --red: #ff00007e;
 }
 
 .btn {
@@ -61,4 +65,19 @@
 
 .btn--secondary--normal:active {
   background-color: var(--secondary--normal--active);
+}
+
+.btn--secondary--destructive {
+  background-color: var(--white);
+  border: 1px solid var(--red);
+  color: var(--secondary--destructive);
+}
+
+.btn--secondary--destructive:hover {
+  transform: translateY(-1px);
+  background-color: var(--secondary--destructive--hover);
+}
+
+.btn--secondary--destructive:active {
+  background-color: var(--secondary--destructive--active);
 }
