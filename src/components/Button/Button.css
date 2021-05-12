@@ -29,6 +29,7 @@
   transition: transform 0.3s ease;
   padding: 8px 14px;
   border: none;
+  font-size: 16px;
 }
 .btn--primary--normal {
   background-color: var(--primary--normal);
