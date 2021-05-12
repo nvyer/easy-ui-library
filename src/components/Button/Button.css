@@ -11,6 +11,9 @@
   --secondary--destructive: #ff0000;
   --secondary--destructive--hover: #ff000011;
   --secondary--destructive--active: #ff000038;
+  --subtle--normal: #0000ff;
+  --subtle--normal--hover: #0000ff1f;
+  --subtle--normal--active: #0000ff42;
   --white: #fff;
   --blue: #0000ffa6;
   --red: #ff00007e;
@@ -96,4 +99,23 @@
 
 .btn--secondary--destructive:active:enabled {
   background-color: var(--secondary--destructive--active);
+}
+
+.btn--subtle--normal {
+  background-color: var(--white);
+  border: none;
+  color: var(--subtle--normal);
+}
+
+.btn--subtle--normal:disabled {
+  opacity: 0.3;
+}
+
+.btn--subtle--normal:hover:enabled {
+  transform: translateY(-1px);
+  background-color: var(--subtle--normal--hover);
+}
+
+.btn--subtle--normal:active:enabled {
+  background-color: var(--subtle--normal--active);
 }

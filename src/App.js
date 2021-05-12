@@ -4,9 +4,7 @@ import Button from "./components/Button/Button";
 function App() {
   return (
     <div className="flex-box">
-      <Button buttonStyle={"btn--secondary--normal"} disabled>
-        Hello world!
-      </Button>
+      <Button buttonStyle={"btn--subtle--normal"}>Hello world!</Button>
     </div>
   );
 }

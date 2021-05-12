@@ -7,11 +7,12 @@ const STYLES = [
   "btn--primary--destructive",
   "btn--secondary--normal",
   "btn--secondary--destructive",
+  "btn--subtle--normal",
 ];
 
 const Button = ({ children, onClick, buttonStyle, disabled }) => {
   const checkBtnStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
-  console.log(disabled);
+
   return (
     <button
       className={`btn ${checkBtnStyle}`}
