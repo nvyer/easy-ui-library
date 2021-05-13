@@ -11,7 +11,7 @@ const STYLES = [
   "btn--subtle--destructive",
 ];
 
-const Button = ({ children, onClick, buttonStyle, disabled }) => {
+const Button = ({ children, onClick, buttonStyle, disabled, isLoading }) => {
   const checkBtnStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
 
   return (
@@ -20,7 +20,8 @@ const Button = ({ children, onClick, buttonStyle, disabled }) => {
       onClick={onClick}
       disabled={disabled}
     >
-      {children}
+      {!isLoading && children}
+      {isLoading && <div className="loader"></div> }
     </button>
   );
 };
