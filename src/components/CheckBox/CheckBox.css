@@ -1,0 +1,100 @@
+.checkbox-label {
+    position: relative;
+    height: 35px;
+    pointer-events: none;
+}
+
+.checkbox-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.check-box::before {
+    pointer-events: initial;
+    cursor: pointer;
+    content: "";
+    display: block;
+    height: 16px;
+    width: 16px;
+    border: 2px solid #d0cece;
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    z-index: 1;
+}
+
+.check-box::after {
+    cursor: pointer;
+    content: "";
+    display: block;
+    height: 16px;
+    width: 16px;
+    background: url("./assets/iconmonstr-check-mark-1-240.png") no-repeat;
+    opacity: 0;
+    background-size: 16px 16px;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    z-index: 2;
+    transition: opacity .1s linear;
+}
+
+.checbox-container {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white
+}
+
+.dark-blue {
+    background-color: #8ef7f4b9;
+}
+
+.dark-grey {
+    background-color: rgb(185, 183, 183);
+}
+
+.blue {
+    background-color: #9df5f281;
+}
+
+.grey {
+    background-color: rgba(226, 226, 226, 0.678);
+}
+
+.checkbox-input:checked+.check-box::before {
+    background-color: #1DD4CE;
+    border: 2px solid #1DD4CE;
+}
+
+.checkbox-input:checked+.check-box::after {
+    opacity: 1;
+}
+
+.checkbox-input:disabled+.check-box::before {
+    border: 2px solid #e9e8e8;
+    cursor: default;
+}
+
+.checkbox-input:disabled+.check-box::after {
+    cursor: default;
+}
+
+.checkbox-input:checked:disabled+.check-box::before {
+    background-color: #949191;
+    border: 2px solid #949191;
+    cursor: default;
+}
+
+.checkbox-input:checked:disabled+.check-box::after {
+    opacity: 1;
+}

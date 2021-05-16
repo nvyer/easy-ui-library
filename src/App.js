@@ -1,11 +1,8 @@
-import './App.css';
+import "./App.css";
+import CheckBox from "./components/CheckBox/CheckBox";
 
 function App() {
-  return (
-    <div>
-     Hello World
-    </div>
-  );
+ 
 }
 
 export default App;
