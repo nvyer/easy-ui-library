@@ -1,4 +1,4 @@
-.standard--input {
+.basic--standard--input {
   outline: 0;
   border-style: none none solid none;
   padding: 4px;
@@ -8,11 +8,11 @@
   transition: all 0.5;
 }
 
-.standard--input::placeholder {
+.input::placeholder {
   color: transparent;
 }
 
-.standard--input:focus {
+.input:focus {
   box-shadow: none;
   border-color: #0f6662;
 }
@@ -21,12 +21,16 @@
   transform: scale(1.05, 1.05);
 }
 
-.standard--input:focus + .input--label,
-.standard--input:not(:placeholder-shown) + .input--label {
+.basic--standard--input:focus + .input--label--standard,
+.basic--standard--input:not(:placeholder-shown) + .input--label--standard {
   transform: translateY(-2.8em) scale(0.8);
 }
 
-.input--label {
+.basic--standard--input:focus + .input--label--standard {
+  color: rgb(63, 62, 62);
+}
+
+.input--label--standard {
   font-size: 1em;
   color: #aaa;
   display: block;
@@ -37,4 +41,40 @@
   width: 2px;
   cursor: text;
   pointer-events: none;
+}
+
+.basic--filled--input {
+  outline: 0;
+  border-style: none none solid none;
+  padding: 24px 6px 6px 15px;
+  font-size: 16px;
+  border-color: rgb(202, 200, 200);
+  background: rgba(204, 204, 204, 0.562);
+  width: 100%;
+  transition: all 0.5;
+  border-radius: 4px;
+}
+
+.input--label--filled {
+  font-size: 1em;
+  color: rgba(85, 84, 84, 0.747);
+  display: block;
+  opacity: 1;
+  transform: translateY(-2.2em);
+  transform-origin: 0 0;
+  transition: all 0.3s;
+  width: 2px;
+  cursor: text;
+  pointer-events: none;
+  margin-left: 1em;
+}
+
+.basic--filled--input:focus + .input--label--filled,
+.basic--filled--input:not(:placeholder-shown) + .input--label--filled {
+  transform: translateY(-2.8em) scale(0.8);
+ 
+}
+
+.basic--filled--input:focus + .input--label--filled {
+  color: rgb(63, 62, 62);
 }

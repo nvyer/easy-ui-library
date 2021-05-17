@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <TextFieldInput label="Standard" />
+      <TextFieldInput label="Filled" variant="filled" />
     </div>
   );
 }
