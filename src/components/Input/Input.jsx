@@ -22,7 +22,7 @@ const TextFieldInput = ({ label, variant, type }) => {
     <div>
       <h1>Input</h1>
       <br />
-      <div className="main--container">
+      <div>
         <input
           type={type ? type : "text"}
           className={`input ${variantStyle}`}

@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <TextFieldInput label="Standard" />
       <TextFieldInput label="Filled" variant="filled" />
+      <TextFieldInput label="outlined" variant="outlined" />
     </div>
   );
 }

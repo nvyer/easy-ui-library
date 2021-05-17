@@ -8,6 +8,10 @@
   transition: all 0.5;
 }
 
+.basic--standard--input:hover {
+  border-color: rgb(150, 150, 150);
+}
+
 .input::placeholder {
   color: transparent;
 }
@@ -15,10 +19,6 @@
 .input:focus {
   box-shadow: none;
   border-color: #0f6662;
-}
-
-.main--container:focus-within {
-  transform: scale(1.05, 1.05);
 }
 
 .basic--standard--input:focus + .input--label--standard,
@@ -38,7 +38,6 @@
   transform: translateY(-1.8em);
   transform-origin: 0 0;
   transition: all 0.3s;
-  width: 2px;
   cursor: text;
   pointer-events: none;
 }
@@ -55,6 +54,10 @@
   border-radius: 4px;
 }
 
+.basic--filled--input:hover {
+  background: rgba(204, 204, 204, 0.76);
+}
+
 .input--label--filled {
   font-size: 1em;
   color: rgba(85, 84, 84, 0.747);
@@ -63,7 +66,6 @@
   transform: translateY(-2.2em);
   transform-origin: 0 0;
   transition: all 0.3s;
-  width: 2px;
   cursor: text;
   pointer-events: none;
   margin-left: 1em;
@@ -72,9 +74,48 @@
 .basic--filled--input:focus + .input--label--filled,
 .basic--filled--input:not(:placeholder-shown) + .input--label--filled {
   transform: translateY(-2.8em) scale(0.8);
- 
 }
 
 .basic--filled--input:focus + .input--label--filled {
+  color: rgb(63, 62, 62);
+}
+/* outlined  */
+.basic--outlined--input {
+  outline: 0;
+  border-style: solid;
+  padding: 24px 6px 6px 15px;
+  font-size: 16px;
+  border-color: rgba(202, 200, 200, 0.459);
+  width: 100%;
+  transition: all 0.5;
+  border-radius: 4px;
+}
+
+.basic--outlined--input:hover {
+  border-color: rgb(131, 129, 129);
+}
+
+.input--label--outlined {
+  font-size: 1em;
+  color: rgba(85, 84, 84, 0.74);
+  display: block;
+  opacity: 1;
+  transform: translateY(-2.2em);
+  transform-origin: 0 0;
+  transition: all 0.3s;
+  width: 3.7em;
+  cursor: text;
+  pointer-events: none;
+  margin-left: 1em;
+  background-color: #fff;
+  padding: 0px 3px;
+}
+
+.basic--outlined--input:focus + .input--label--outlined,
+.basic--outlined--input:not(:placeholder-shown) + .input--label--outlined {
+  transform: translateY(-3.8em) scale(0.8);
+}
+
+.basic--outlined--input:focus + .input--label--outlined {
   color: rgb(63, 62, 62);
 }
