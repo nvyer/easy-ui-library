@@ -1,13 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 
 import "./Input.css";
 
 const TextFieldInput = ({ label, placeholder }) => {
-  const inputFocus = useRef(null);
-  const onLabelFocus = () => {
-    inputFocus.current.focus();
-  };
-
   return (
     <div>
       <h1>Input</h1>
@@ -17,11 +12,8 @@ const TextFieldInput = ({ label, placeholder }) => {
           type="text"
           className="standard--input"
           placeholder={`${placeholder}`}
-          ref={inputFocus}
         />
-        <label className="input--label" onFocus={onLabelFocus}>
-          {label}
-        </label>
+        <label className="input--label">{label}</label>
       </div>
     </div>
   );
