@@ -1,0 +1,40 @@
+.standard--input {
+  outline: 0;
+  border-style: none none solid none;
+  padding: 4px;
+  font-size: 16px;
+  border-color: #ccc;
+  width: 100%;
+  transition: all 0.5;
+}
+
+.standard--input::placeholder {
+  color: transparent;
+}
+
+.standard--input:focus {
+  box-shadow: none;
+  border-color: #0f6662;
+}
+
+.main--container:focus-within {
+  transform: scale(1.05, 1.05);
+}
+
+.standard--input:focus + .input--label,
+.standard--input:not(:placeholder-shown) + .input--label {
+  transform: translateY(-2.8em) scale(0.8);
+}
+
+.input--label {
+  font-size: 1em;
+  color: #aaa;
+  display: block;
+  opacity: 1;
+  transform: translateY(-1.8em);
+  transform-origin: 0 0;
+  transition: all 0.3s;
+  width: 2px;
+  cursor: text;
+  pointer-events: none;
+}
