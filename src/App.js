@@ -1,11 +1,20 @@
 import "./App.css";
+
+// function App() {
+//   return (
+//     <div>
+//       Hello World
+//     </div>
+//   );
+// }
+//  ============== For test =========== 
 import { GroupOptions, Option, Select } from "./components/Select/select";
-import { NativeSelect} from "./components/Select/native-select"
+// import { NativeSelect } from "./components/Select/native-select"
 
 function App() {
   return (
     <div>
-      <h3>Primary</h3>
+      {/* <h3>Primary</h3>
       <NativeSelect selectStyle={"native--select--primary"} name="Countries">
         <option value="" disabled selected>
           Choose country...
@@ -43,7 +52,7 @@ function App() {
           <option>Yerevan</option>
           <option>New York</option>
         </optgroup>
-      </NativeSelect>
+      </NativeSelect> */}
       <h3>Group Select</h3>
          <Select placeholder="Choose Country..."  onChange={(value) => console.log(value)} >
         <GroupOptions title="Country" id="1">

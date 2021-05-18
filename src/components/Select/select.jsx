@@ -16,26 +16,29 @@ export const Select = ({
   const openOptions = () => {
     !isBlock ? setIsBlock(true) : setIsBlock(false);
   };
+
+  const addOption = (elem) => {
+    selectValue.some((el) => el.value === elem)
+      ? setSelectValue((prevState) => [
+          ...prevState.filter((el) => el.value !== elem),
+        ])
+      : setSelectValue((prevState) => [
+          ...prevState,
+          { value: elem, selected: true },
+        ]);
+  };
   const changeSelectValue = (event) => {
     setClicked(true);
     if (multypleType) {
-      const value = checkMultypleOptions(event);
-      selectValue.some((el) => el.value === event.target.innerText)
-        ? setSelectValue((prevState) => [
-            ...prevState.filter((el) => el.value !== event.target.innerText),
-          ])
-        : setSelectValue((prevState) => [
-            ...prevState,
-            { value: event.target.innerText, selected: true },
-          ]);
-
-      onChange !== undefined && onChange(value);
+      const value = chackMultypleOptions(event);
+      addOption(event.target.innerText);
+      onChange !== undefined && onChange(value.map(el => el.value));
     } else {
-      checkOneOption(event);
+      chackOneOption(event);
       onChange !== undefined && onChange(event.target.innerText);
     }
   };
-  const checkOneOption = ({ target: { innerText } }) => {
+  const chackOneOption = ({ target: { innerText } }) => {
     if (selectValue.some((el) => el.value === innerText)) {
       setSelectValue([]);
       setClicked(false);
@@ -44,7 +47,7 @@ export const Select = ({
     }
   };
 
-  const checkMultypleOptions = ({ target: { innerText } }) => {
+  const chackMultypleOptions = ({ target: { innerText } }) => {
     if (selectValue.some((el) => el.value === innerText)) {
       return [...selectValue.filter((el) => el.value !== innerText)];
     } else {
@@ -150,9 +153,7 @@ export const Select = ({
           {clicked && <p className="placeholder">{placeholder}</p>}
           <div className={"select-title--primary"} onClick={openOptions}>
             {clicked
-              ? multypleType
-                ? multypleTitle(selectValue)
-                : selectValue.map((el) => el.value)
+              ? (multypleType ? multypleTitle(selectValue) : selectValue.map((el) => el.value))
               : placeholder}
             <span className="arrow-down"></span>
           </div>
