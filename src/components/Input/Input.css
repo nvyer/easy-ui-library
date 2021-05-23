@@ -8,7 +8,7 @@
   transition: all 0.5;
 }
 
-.basic--standard--input:hover {
+.basic--standard--input:hover:enabled {
   border-color: rgb(150, 150, 150);
 }
 
@@ -54,7 +54,7 @@
   border-radius: 4px;
 }
 
-.basic--filled--input:hover {
+.basic--filled--input:hover:enabled {
   background: rgba(204, 204, 204, 0.76);
 }
 
@@ -91,7 +91,7 @@
   border-radius: 4px;
 }
 
-.basic--outlined--input:hover {
+.basic--outlined--input:hover:enabled {
   border-color: rgb(131, 129, 129);
 }
 
@@ -103,7 +103,7 @@
   transform: translateY(-2.2em);
   transform-origin: 0 0;
   transition: all 0.3s;
-  width: 3.7em;
+  width: max-content;
   cursor: text;
   pointer-events: none;
   margin-left: 1em;
@@ -119,3 +119,7 @@
 .basic--outlined--input:focus + .input--label--outlined {
   color: rgb(63, 62, 62);
 }
+
+/* .helper-text {
+  transform: translateY(-3.8em) ;
+} */

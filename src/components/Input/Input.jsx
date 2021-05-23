@@ -2,7 +2,16 @@ import React from "react";
 
 import "./Input.css";
 
-const TextFieldInput = ({ label, variant, type }) => {
+const TextFieldInput = ({
+  label,
+  variant,
+  type,
+  required,
+  disabled,
+  readonly,
+  value,
+  helperText,
+}) => {
   let variantStyle, labelType;
   switch (variant) {
     case "filled":
@@ -20,15 +29,21 @@ const TextFieldInput = ({ label, variant, type }) => {
 
   return (
     <div>
-      <h1>Input</h1>
       <br />
       <div>
         <input
           type={type ? type : "text"}
           className={`input ${variantStyle}`}
           placeholder={" "}
+          disabled={disabled}
+          {...(readonly && { readonly })}
+          value={value}
         />
-        <label className={labelType}>{label}</label>
+        <label className={labelType}>
+          {label}
+          {required && " *"}
+        </label>
+        <div className="helper-text">{helperText && helperText}</div>
       </div>
     </div>
   );
