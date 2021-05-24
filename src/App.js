@@ -31,6 +31,17 @@ function App() {
         defaultValue="Read only with helperText"
         helperText="some helper text some helper text"
       />
+      <TextFieldInput
+        label="ERROR"
+        variant="outlined"
+        error={true}
+        helperText="error massage"
+      />
+      <TextFieldInput
+        label="Standard"
+        error={true}
+        helperText="error massage"
+      />
     </div>
   );
 }
