@@ -8,8 +8,8 @@ const TextFieldInput = ({
   type,
   required,
   disabled,
-  readonly,
-  value,
+  readOnly,
+  defaultValue,
   helperText,
 }) => {
   let variantStyle, labelType;
@@ -28,23 +28,23 @@ const TextFieldInput = ({
   }
 
   return (
-    <div>
+    <div className="input-container-box">
       <br />
-      <div>
+      <div className="input-box">
         <input
           type={type ? type : "text"}
           className={`input ${variantStyle}`}
           placeholder={" "}
           disabled={disabled}
-          {...(readonly && { readonly })}
-          value={value}
+          {...(readOnly && { readOnly })}
+          defaultValue={defaultValue}
         />
         <label className={labelType}>
           {label}
           {required && " *"}
         </label>
-        <div className="helper-text">{helperText && helperText}</div>
       </div>
+      <span className="helper-text">{helperText}</span>
     </div>
   );
 };

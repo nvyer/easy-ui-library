@@ -21,15 +21,15 @@ function App() {
         variant="outlined"
         type="text"
         readonly="readonly"
-        value="Read only"
+        defaultValue="Read only"
       />
       <TextFieldInput
         label="READ only"
         variant="outlined"
         type="text"
-        readonly="readonly"
-        value="Read only"
-        helperText="some helper text"
+        readOnly="readonly"
+        defaultValue="Read only with helperText"
+        helperText="some helper text some helper text"
       />
     </div>
   );
