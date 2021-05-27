@@ -1,0 +1,28 @@
+.badge-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: Transparent;
+}
+
+.badge-number--large {
+  position: absolute;
+  background: rgba(255, 0, 0, 0.781);
+  border: none;
+  border-radius: 50%;
+  padding: 4px;
+  top: -7px;
+  right: -7px;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
