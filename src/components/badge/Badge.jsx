@@ -1,5 +1,5 @@
 import Icon from "@mdi/react";
-import { mdiEmail } from "@mdi/js";
+import { mdiEmail, mdiBell, mdiChatProcessing, mdiBiohazard } from "@mdi/js";
 import "./Badge.css";
 
 const Badge = ({ size, rotate, color, icon, badgeContent, onClick }) => {
@@ -7,6 +7,18 @@ const Badge = ({ size, rotate, color, icon, badgeContent, onClick }) => {
   switch (icon) {
     case "email":
       iconType = mdiEmail;
+      break;
+
+    case "notification":
+      iconType = mdiBell;
+      break;
+
+    case "chat":
+      iconType = mdiChatProcessing;
+      break;
+
+    case "toxic":
+      iconType = mdiBiohazard;
       break;
 
     default:
