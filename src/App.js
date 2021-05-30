@@ -1,11 +1,8 @@
 import './App.css';
+import TimePicker from "./TimePicker/timePicker";
 
 function App() {
-  return (
-    <div>
-     Hello World
-    </div>
-  );
+  
 }
 
 export default App;
