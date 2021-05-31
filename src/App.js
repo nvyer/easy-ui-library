@@ -67,6 +67,87 @@ function App() {
           badgeContent={500}
         />
       </div>
+      <div className="temp-wraper">
+        <Badge
+          size={1}
+          rotate={180}
+          color={"grey"}
+          icon={"wireless"}
+          badgeContent={500}
+        />
+      </div>
+      <div className="temp-wraper">
+        <Badge
+          size={2}
+          rotate={180}
+          color={"grey"}
+          icon={"wireless"}
+          badgeContent={500}
+        />
+      </div>
+      <div className="temp-wraper">
+        <Badge
+          size={2}
+          rotate={180}
+          color={"blue"}
+          icon={"wireless"}
+          badgeContent={500}
+        />
+      </div>
+      <div className="temp-wraper">
+        <Badge
+          size={3}
+          rotate={180}
+          color={"grey"}
+          icon={"wireless"}
+          badgeContent={500}
+        />
+      </div>
+      <div className="temp-wraper">
+        <Badge
+          size={2}
+          rotate={180}
+          color={"grey"}
+          icon={"account"}
+          badgeContent={500}
+        />
+      </div>
+      <div className="temp-wraper">
+        <Badge
+          size={2}
+          rotate={180}
+          color={"lightblue"}
+          icon={"account"}
+          badgeContent={500}
+        />
+      </div>
+      <div className="temp-wraper">
+        <Badge
+          size={3}
+          rotate={180}
+          color={"lightblue"}
+          icon={"account"}
+          badgeContent={500}
+        />
+      </div>
+      <div className="temp-wraper">
+        <Badge
+          size={2}
+          rotate={180}
+          color={"lightblue"}
+          icon={"alert"}
+          badgeContent={500}
+        />
+      </div>
+      <div className="temp-wraper">
+        <Badge
+          size={2}
+          rotate={180}
+          color={"grey"}
+          icon={"alert"}
+          badgeContent={500}
+        />
+      </div>
     </div>
   );
 }

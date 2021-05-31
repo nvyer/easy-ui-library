@@ -1,5 +1,13 @@
 import Icon from "@mdi/react";
-import { mdiEmail, mdiBell, mdiChatProcessing, mdiBiohazard } from "@mdi/js";
+import {
+  mdiEmail,
+  mdiBell,
+  mdiChatProcessing,
+  mdiBiohazard,
+  mdiAccessPoint,
+  mdiAccountCircle,
+  mdiAlert 
+} from "@mdi/js";
 import "./Badge.css";
 
 const Badge = ({ size, rotate, color, icon, badgeContent, onClick }) => {
@@ -20,7 +28,15 @@ const Badge = ({ size, rotate, color, icon, badgeContent, onClick }) => {
     case "toxic":
       iconType = mdiBiohazard;
       break;
-
+    case "wireless":
+      iconType = mdiAccessPoint;
+      break;
+      case "account":
+        iconType = mdiAccountCircle;
+        break;
+        case "alert":
+          iconType = mdiAlert;
+          break;
     default:
       break;
   }
