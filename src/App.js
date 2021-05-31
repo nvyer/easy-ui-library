@@ -1,11 +1,8 @@
-import './App.css';
+import "./App.css";
+import Stepper from "./Components/stepper";
 
 function App() {
-  return (
-    <div>
-     Hello World
-    </div>
-  );
-}
+    return <div>hello world</div>;
+};
 
 export default App;
