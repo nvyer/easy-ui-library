@@ -39,7 +39,7 @@ const TimePicker = (props) => {
     const openModal = () => {
         if (errorMessage === false) {
             setIsModalOpen(true);
-        }else {
+        } else {
             setIsModalOpen(false);
         }
     };
@@ -72,7 +72,7 @@ const TimePicker = (props) => {
                     <TimeModal
                         changeTime={(value) => {
                             setInputValue(value);
-                            props.onChange({ target: { value } });
+                            props.onChange && props.onChange({ target: { value } });
                         }}
                         closeModal={setIsModalOpen}
                         time={inputValue.split(' ')[0]}
@@ -85,3 +85,4 @@ const TimePicker = (props) => {
 };
 
 export default TimePicker;
+
