@@ -6,7 +6,8 @@ import {
   mdiBiohazard,
   mdiAccessPoint,
   mdiAccountCircle,
-  mdiAlert 
+  mdiAlert,
+  mdiAlertCircle,
 } from "@mdi/js";
 import "./Badge.css";
 
@@ -31,12 +32,15 @@ const Badge = ({ size, rotate, color, icon, badgeContent, onClick }) => {
     case "wireless":
       iconType = mdiAccessPoint;
       break;
-      case "account":
-        iconType = mdiAccountCircle;
-        break;
-        case "alert":
-          iconType = mdiAlert;
-          break;
+    case "account":
+      iconType = mdiAccountCircle;
+      break;
+    case "alert":
+      iconType = mdiAlert;
+      break;
+    case "error":
+      iconType = mdiAlertCircle;
+      break;
     default:
       break;
   }
