@@ -3,14 +3,14 @@ import "./slider.css";
 
 export const Slider = ({
   step = 1,
-  min,
-  max,
-  defaultValue,
+  min = 0,
+  max = 100,
+  defaultValue = 1,
   onChange,
   disabled,
   marks,
   label,
-  sliderColor,
+  sliderColor
 }) => {
   const thumbRef = useRef(null);
   const railRef = useRef(null);
