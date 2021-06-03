@@ -11,10 +11,14 @@ export const Select = ({
 }) => {
   const [isBlock, setIsBlock] = useState(false);
   const [selectValue, setSelectValue] = useState([]);
-  const [clicked, setClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   const openOptions = () => {
-    !isBlock ? setIsBlock(true) : setIsBlock(false);
+    if (!isBlock) {
+      setIsBlock(true);
+    } else {
+      setIsBlock(false);
+    }
   };
 
   const addOption = (elem) => {
@@ -28,11 +32,11 @@ export const Select = ({
         ]);
   };
   const changeSelectValue = (event) => {
-    setClicked(true);
+    setIsClicked(true);
     if (multypleType) {
       const value = chackMultypleOptions(event);
       addOption(event.target.innerText);
-      onChange !== undefined && onChange(value.map(el => el.value));
+      onChange !== undefined && onChange(value.map((el) => el.value));
     } else {
       chackOneOption(event);
       onChange !== undefined && onChange(event.target.innerText);
@@ -41,7 +45,7 @@ export const Select = ({
   const chackOneOption = ({ target: { innerText } }) => {
     if (selectValue.some((el) => el.value === innerText)) {
       setSelectValue([]);
-      setClicked(false);
+      setIsClicked(false);
     } else {
       setSelectValue([{ value: innerText, selected: true }]);
     }
@@ -56,11 +60,11 @@ export const Select = ({
   };
   const handleBlur = () => {
     setIsBlock(false);
-    if (!clicked) {
+    if (!isClicked) {
       setSelectValue([]);
     }
     if (selectValue.length === 0) {
-      setClicked(false);
+      setIsClicked(false);
     }
   };
 
@@ -70,17 +74,19 @@ export const Select = ({
     }
     return false;
   };
-
+  const selectedItemStyle = (el) => {
+    if (selectValue.some((el) => el.selected) && isItemInSelection(el)) {
+      return "selected";
+    } else {
+      return "";
+    }
+  };
   const renderSelectComponent = (elem) => {
     return elem.map((el) => {
       if (!Array.isArray(el.props.children)) {
         return (
           <div
-            className={
-              selectValue.some((el) => el.selected) && isItemInSelection(el)
-                ? "selected"
-                : ""
-            }
+            className={selectedItemStyle(el)}
             key={el.props.id}
             onClick={changeSelectValue}
           >
@@ -93,12 +99,7 @@ export const Select = ({
             <b className="option-title--primary">{el.props.title}</b>
             {el.props.children.map((elem) => (
               <div
-                className={
-                  selectValue.some((el) => el.selected) &&
-                  isItemInSelection(elem)
-                    ? "selected"
-                    : ""
-                }
+                className={selectedItemStyle(elem)}
                 onClick={changeSelectValue}
                 key={elem.props.id}
               >
@@ -150,10 +151,12 @@ export const Select = ({
     <div value={value} id={id}>
       <div className="select--primary" tabIndex="0" onBlur={handleBlur}>
         <>
-          {clicked && <p className="placeholder">{placeholder}</p>}
+          {isClicked && <p className="placeholder">{placeholder}</p>}
           <div className={"select-title--primary"} onClick={openOptions}>
-            {clicked
-              ? (multypleType ? multypleTitle(selectValue) : selectValue.map((el) => el.value))
+            {isClicked
+              ? multypleType
+                ? multypleTitle(selectValue)
+                : selectValue.map((el) => el.value)
               : placeholder}
             <span className="arrow-down"></span>
           </div>
