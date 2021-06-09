@@ -2,15 +2,15 @@ import React, { useState } from "react";
 
 import "./tag.css";
 
-const colors = {
+const colorTypes = {
     primary: "#1DD4CE",
     secondary: " #2C3E50"
 };
 
-const Tag = ({ placeholder, color }) => {
+const Tag = ({ placeholder, type }) => {
     const [tags, setTags] = useState([]);
 
-    const handleRemove = (idx) => {
+    const handleRemove = (idx) => { // useCallback
         const newTags = [...tags];
         newTags.splice(idx, 1);
 
@@ -38,7 +38,7 @@ const Tag = ({ placeholder, color }) => {
                         key={idx}
                         className="li-tags"
                         style={{
-                            backgroundColor: `${colors[color]}`,
+                            backgroundColor: `${colorTypes[type]}`,
                         }}
                     >
                         {el}
