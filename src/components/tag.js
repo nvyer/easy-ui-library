@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import "./tag.css";
 
-const colorTypes = {
+const types = {
     primary: "#1DD4CE",
     secondary: " #2C3E50"
 };
@@ -10,14 +10,14 @@ const colorTypes = {
 const Tag = ({ placeholder, type }) => {
     const [tags, setTags] = useState([]);
 
-    const handleRemove = (idx) => { // useCallback
+    const handleRemove = useCallback((idx) => {
         const newTags = [...tags];
         newTags.splice(idx, 1);
 
         setTags([...newTags]);
-    };
+    }, [tags]);
 
-    const handleKeyDown = (e) => {
+    const handleKeyDown = useCallback((e) => {
         const inputValue = e.target.value.trim();
 
         if (e.key === "Enter" && inputValue) {
@@ -28,7 +28,7 @@ const Tag = ({ placeholder, type }) => {
         } else if (e.key === "Backspace" && !inputValue) {
             handleRemove(tags.length - 1);
         }
-    };
+    }, [tags, handleRemove]);
 
     return (
         <div className="tag-input-container">
@@ -38,13 +38,13 @@ const Tag = ({ placeholder, type }) => {
                         key={idx}
                         className="li-tags"
                         style={{
-                            backgroundColor: `${colorTypes[type]}`,
+                            backgroundColor: `${types[type]}`,
                         }}
                     >
                         {el}
                         <button onClick={() => handleRemove(idx)} className="remove-btn">
                             x
-              </button>
+                        </button>
                     </li>
                 ))}
                 <li className="tag-input-li-container">
@@ -62,7 +62,7 @@ const Tag = ({ placeholder, type }) => {
 
 
 Tag.defaultProps = {
-    color: "primary",
+    type: "primary",
     placeholder: "Type here ..."
 };
 
