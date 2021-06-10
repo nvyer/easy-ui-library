@@ -7,7 +7,7 @@ const types = {
     secondary: " #2C3E50"
 };
 
-const Tag = ({ placeholder, type }) => {
+const Tag = ({ className, placeholder, type }) => {
     const [tags, setTags] = useState([]);
 
     const handleRemove = useCallback((idx) => {
@@ -31,7 +31,7 @@ const Tag = ({ placeholder, type }) => {
     }, [tags, handleRemove]);
 
     return (
-        <div className="tag-input-container">
+        <div className={className ? className : "tag-input-container"}>
             <ul className="ul-input">
                 {tags.map((el, idx) => (
                     <li
@@ -56,7 +56,7 @@ const Tag = ({ placeholder, type }) => {
                     />
                 </li>
             </ul>
-        </div>
+        </div >
     );
 };
 
