@@ -1,67 +1,57 @@
-import React, { useState } from "react";
-import "./CheckBox.css";
-import "./IndeterminateCheckbox.css";
+import { useCheckBoxStyles, getStyle, getClassName, getPath } from "./styles";
+import React, { useCallback, useState } from "react";
+import PropTypes from "prop-types";
 
-const CheckBox = ({ indeterminate, size, onChange, disabled, checked }) => {
-    const [backgroundColor, setbackgroundColor] = useState("");
-    const [check, setCheck] = useState(checked);
+const colorOptions = {
+    primary: "#1dd4ce",
+    secondary: "#2C3E50"
+};
 
-    const handleBackgroundonHover = () => {
-        if (check && !disabled) {
-            return setbackgroundColor("blue");
-        } else if (disabled) {
-            return
-        } else {
-            return setbackgroundColor("grey");
-        }
-    };
+const CheckBox = ({ className, color, value, checked, indeterminate, onChange, disabled }) => {
+    const [clicked, setClicked] = useState(indeterminate ? true : checked);
+    const [currentColor] = useState(colorOptions[color]);
 
-    const resetBackgroundColoronHover = () => {
-        setbackgroundColor("");
-    };
+    const handleClick = useCallback((event) => {
+        setClicked(prevState => !prevState);
+        event.target.value = value;
+        onChange(event);
+    }, [value, setClicked, onChange]);
 
-    const changeChecked = () => {
-        setCheck(prevState => {
-            if (prevState === undefined) {
-                return prevState = true;
-            } else {
-                return !prevState;
-            }
-        })
-    };
 
-    const handleMouseDown = () => {
-        if (check && !disabled) {
-            return setbackgroundColor("dark-blue");
-        } else if (disabled) {
-            return
-        } else {
-            return setbackgroundColor("dark-grey");
-        }
-    }
+    const classes = useCheckBoxStyles({ disabled, clicked, indeterminate, currentColor });
 
     return (
-        <label className="checkbox-label">
-            <span
-                className={`checbox-container ${backgroundColor}`}
-                onMouseOut={resetBackgroundColoronHover}
-                onMouseOver={handleBackgroundonHover}
+        <div className={classes.checkBoxContainer}>
+            <div
+                onClick={handleClick}
+                className={className ? className : classes.checkBox}
             >
-                <input
-                    type="checkbox"
-                    className={`checkbox-input`}
-                    onChange={onChange}
-                    checked={checked}
-                    disabled={disabled}
-                />
-                <span
-                    tabIndex='-1'
-                    onClick={changeChecked}
-                    onMouseDown={handleMouseDown}
-                    className={!indeterminate ? "check-box" : "indeterminate-checkbox"}></span>
-            </span>
-        </label>
+                <svg
+                    style={getStyle(indeterminate, clicked, disabled, currentColor)}
+                    className={classes[`${getClassName(indeterminate, clicked)}`]}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="-2.5 1.9 27 27">
+                    <path d={getPath(indeterminate, clicked)} />
+                </svg>
+            </div>
+        </div >
     )
-}
+};
+
+CheckBox.defaultProps = {
+    color: "primary",
+    onChange: () => { },
+};
+
+CheckBox.propTypes = {
+    indeterminate: PropTypes.bool,
+    disabled: PropTypes.bool,
+    checked: PropTypes.bool,
+    className: PropTypes.string,
+    value: PropTypes.any
+};
 
 export default CheckBox;
+
