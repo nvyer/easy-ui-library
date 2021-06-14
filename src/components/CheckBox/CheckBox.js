@@ -13,7 +13,7 @@ const CheckBox = ({ className, color, value, checked, indeterminate, onChange, d
 
     const handleClick = useCallback((event) => {
         setClicked(prevState => !prevState);
-        event.target.value = value;
+        event.target.value = value || "on";
         onChange(event);
     }, [value, setClicked, onChange]);
 
