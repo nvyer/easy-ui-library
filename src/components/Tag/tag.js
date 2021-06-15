@@ -45,7 +45,7 @@ const Tag = ({ className, placeholder, type }) => {
                     <input
                         type="text"
                         onKeyDown={handleKeyDown}
-                        className="tags-holder"
+                        className="tag-holder"
                         placeholder={placeholder}
                     />
                 </li>
