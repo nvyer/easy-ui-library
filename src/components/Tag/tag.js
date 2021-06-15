@@ -27,7 +27,7 @@ const Tag = ({ className, placeholder, type }) => {
 
     return (
         <div className={className ? className : "tag-container"}>
-            <ul className="wrapper">
+            <ul className="tag-wrapper">
                 {tags.map((el, idx) => (
                     <li
                         key={el}
@@ -45,7 +45,7 @@ const Tag = ({ className, placeholder, type }) => {
                     <input
                         type="text"
                         onKeyDown={handleKeyDown}
-                        className="input-holder"
+                        className="tags-holder"
                         placeholder={placeholder}
                     />
                 </li>

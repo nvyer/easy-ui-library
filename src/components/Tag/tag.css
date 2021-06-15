@@ -6,7 +6,7 @@
   flex-wrap: wrap;
 }
 
-.wrapper {
+.tag-wrapper {
   display: inline-flex;
   flex-wrap: wrap;
   margin: 0 25px;
@@ -41,7 +41,7 @@
   padding: 0;
 }
 
-.input-holder {
+.tags-holder {
   padding: 12px;
   font-size: 20px;
   border: none;
