@@ -1,8 +1,5 @@
 import "./App.css";
 
-
-export function App() {
-
-};
+export function App() { };
 
 export default App;

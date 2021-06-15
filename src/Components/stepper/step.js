@@ -6,23 +6,28 @@ import { useContext, useEffect, useState } from "react";
 import { CurrentStep } from "./stepper";
 import { getActiveIcon, getCheckedIcon, getErrorIcon } from "./stepperIcons";
 
+const colors = {
+    isDisabled: "#1b191975",
+    error: "#ba1d1d"
+};
+
 const getColor = ({ isDisabled, error }) => {
     if (isDisabled) {
-        return "#1b191975"
+        return colors[isDisabled]
     } else if (error) {
-        return "#ba1d1d"
+        return colors[error]
     }
 };
 
 const Step = ({ error, checked, disabled, id, children }) => {
     const [isDisabled, setIsDisabled] = useState(disabled);
     const [isChecked, setIsChecked] = useState(checked);
-    const [IsActive, setIsActive] = useState();
+    const [isActive, seiIsActive] = useState();
     const activeStep = useContext(CurrentStep);
 
     useEffect(() => {
         if (!activeStep && !error && !isChecked) {
-            setIsActive(true);
+            seiIsActive(true);
         }
     }, [activeStep, error, isChecked]);
 
@@ -43,6 +48,7 @@ const Step = ({ error, checked, disabled, id, children }) => {
     }, [id, activeStep])
 
     const classes = useStepStyles();
+
     return (
         <span
             disabled={isDisabled}
@@ -53,9 +59,9 @@ const Step = ({ error, checked, disabled, id, children }) => {
         >
             <span className={classes.stepWrapper}>
                 <span>
-                    {IsActive && getActiveIcon({ id, classes, isDisabled })}
-                    {error && getErrorIcon({ isDisabled })}
-                    {isChecked && !error && getCheckedIcon({ isDisabled, classes })}
+                    {isActive && GetActiveIcon({ id, classes, isDisabled })}
+                    {error && GetErrorIcon({ isDisabled })}
+                    {isChecked && !error && GetCheckedIcon({ isDisabled, classes })}
                 </span>
                 {children}
             </span>

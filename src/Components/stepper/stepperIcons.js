@@ -1,6 +1,6 @@
 import React from "react";
 
-export const getActiveIcon = ({ id, classes, isDisabled }) => (
+export const GetActiveIcon = ({ id, classes, isDisabled }) => (
     <svg
         className={classes.circleIcon}
         style={{ fill: isDisabled ? "#1b191975" : "#1DD4CE" }}
@@ -13,7 +13,7 @@ export const getActiveIcon = ({ id, classes, isDisabled }) => (
     </svg>
 );
 
-export const getCheckedIcon = ({ isDisabled, classes }) => (
+export const GetCheckedIcon = ({ isDisabled, classes }) => (
     <svg
         className={classes.checkedIcon}
         style={{ fill: isDisabled ? "#1b191975" : "#1DD4CE" }}
@@ -25,7 +25,7 @@ export const getCheckedIcon = ({ isDisabled, classes }) => (
     </svg>
 );
 
-export const getErrorIcon = ({ isDisabled }) => (
+export const GetErrorIcon = ({ isDisabled }) => (
     <svg
         style={{ fill: isDisabled ? "#1b191975" : "#ba1d1d" }}
         xmlns="http://www.w3.org/2000/svg"

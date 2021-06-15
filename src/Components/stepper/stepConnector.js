@@ -1,6 +1,5 @@
 import { useStepConectorStyles } from "./styles";
 
-
 const StepConnector = () => {
     const classes = useStepConectorStyles();
     return (
