@@ -11,6 +11,7 @@ export const BreadCrumbs = ({ children, breadcrumbsStyle, separator, tag }) => {
       setIsHiddenCrumb(true);
     }
   }, []);
+
   const showHiddenCrumbs = () => {
     setIsHiddenCrumb(true);
   };
@@ -37,6 +38,7 @@ export const BreadCrumbs = ({ children, breadcrumbsStyle, separator, tag }) => {
       );
     });
   };
+
   const renderLongChildren = (crumbs) => {
     return (
       <>
@@ -60,6 +62,7 @@ export const BreadCrumbs = ({ children, breadcrumbsStyle, separator, tag }) => {
       </>
     );
   };
+  
   return (
     <nav className="breadcrumbs-container" className={`${breadcrumbsStyle}`}>
       {isHiddenCrumb ? renderCrumbs(children) : renderLongChildren(children)}
