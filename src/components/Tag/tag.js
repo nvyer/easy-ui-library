@@ -10,12 +10,7 @@ const types = {
 const Tag = ({ className, placeholder, type }) => {
     const [tags, setTags] = useState([]);
 
-    const handleRemove = useCallback((idx) => {
-        const newTags = [...tags];
-        newTags.splice(idx, 1);
-
-        setTags([...newTags]);
-    }, [tags]);
+    const handleRemove = useCallback((el) => setTags(prevState => prevState.filter(tag => tag !== el)), []);
 
     const handleKeyDown = useCallback((e) => {
         const inputValue = e.target.value.trim();
@@ -26,32 +21,31 @@ const Tag = ({ className, placeholder, type }) => {
             }
             e.target.value = null;
         } else if (e.key === "Backspace" && !inputValue) {
-            handleRemove(tags.length - 1);
+            handleRemove(tags[tags.length - 1]);
         }
     }, [tags, handleRemove]);
 
     return (
-        <div className={className ? className : "tag-input-container"}>
-            <ul className="ul-input">
+        <div className={className ? className : "tag-container"}>
+            <ul className="wrapper">
                 {tags.map((el, idx) => (
                     <li
-                        key={idx}
-                        className="li-tags"
+                        key={el}
+                        className="tag"
                         style={{
                             backgroundColor: `${types[type]}`,
-                        }}
-                    >
+                        }}>
                         {el}
-                        <button onClick={() => handleRemove(idx)} className="remove-btn">
+                        <button onClick={() => handleRemove(el)} className="remove-btn">
                             x
                         </button>
                     </li>
                 ))}
-                <li className="tag-input-li-container">
+                <li className="main-container">
                     <input
                         type="text"
                         onKeyDown={handleKeyDown}
-                        className="tag-input"
+                        className="input-holder"
                         placeholder={placeholder}
                     />
                 </li>
