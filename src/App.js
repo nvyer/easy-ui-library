@@ -1,10 +1,4 @@
 
-function App() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+function App() {};
 
 export default App
