@@ -5,12 +5,11 @@ const Link = ({ color, onClick, to, children }) => {
     const classes = useLinkStyles(color);
     return (
         <a
-            onClick={(e) => {
-                onClick(e);
-                window.location.pathname = to;
-            }}
+            onClick={onClick}
             className={classes.link}
-            href={to}>{children}</a>
+            href={to}>
+            {children}
+        </a>
     )
 };
 
