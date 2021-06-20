@@ -1,0 +1,9 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.accessibilitySupport": "on",
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "prettier.htmlWhitespaceSensitivity": "strict",
+    "prettier.jsxSingleQuote": true,
+    "editor.formatOnSave": true
+}
