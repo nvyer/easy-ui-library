@@ -1,12 +1,5 @@
 import "./App.css";
-import TextFieldInput from "./components/Input/Input";
 
-function App() {
-  return (
-    <div>
-      
-    </div>
-  );
-}
+function App() { };
 
 export default App;
