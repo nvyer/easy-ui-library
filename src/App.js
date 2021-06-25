@@ -1,8 +1,5 @@
 import "./App.css";
-import Badge from "./components/badge/Badge";
 
-function App() {
-  return <div></div>;
-}
+function App() { };
 
 export default App;

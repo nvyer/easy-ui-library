@@ -10,76 +10,65 @@ import {
   mdiAlertCircle,
 } from "@mdi/js";
 import "./Badge.css";
+import { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
+
+const iconTypes = {
+  email: mdiEmail,
+  notification: mdiBell,
+  chat: mdiChatProcessing,
+  toxic: mdiBiohazard,
+  wireless: mdiAccessPoint,
+  account: mdiAccountCircle,
+  alert: mdiAlert,
+  error: mdiAlertCircle,
+};
+
+const badgeSizes = {
+  small: 1,
+  medium: 2,
+  large: 3,
+};
+
+const getIcon = (icon) => `${iconTypes[icon]}`;
 
 const Badge = ({ size, rotate, color, icon, badgeContent, onClick }) => {
-  let iconType, badgeSize;
-  switch (icon) {
-    case "email":
-      iconType = mdiEmail;
-      break;
-
-    case "notification":
-      iconType = mdiBell;
-      break;
-
-    case "chat":
-      iconType = mdiChatProcessing;
-      break;
-
-    case "toxic":
-      iconType = mdiBiohazard;
-      break;
-    case "wireless":
-      iconType = mdiAccessPoint;
-      break;
-    case "account":
-      iconType = mdiAccountCircle;
-      break;
-    case "alert":
-      iconType = mdiAlert;
-      break;
-    case "error":
-      iconType = mdiAlertCircle;
-      break;
-    default:
-      break;
-  }
-
-  switch (size) {
-    case 1:
-      badgeSize = "badge-number--small";
-      break;
-
-    case 2:
-      badgeSize = "badge-number--medium";
-      break;
-    case 3:
-      badgeSize = "badge-number--large";
-      break;
-
-    default:
-      break;
-  }
-
-  if (badgeContent > 999) {
-    badgeContent = "+999";
-  }
+  const content = useRef(badgeContent);
+  useEffect(() => {
+    if (badgeContent > 999) {
+      content.current = "+999";
+    }
+  }, [content]);
 
   return (
     <div>
       <button className="badge-container" onClick={onClick}>
         <Icon
-          path={iconType}
-          size={size}
+          path={getIcon(icon)}
+          size={badgeSizes[size]}
           horizontal
           vertical
           rotate={rotate}
           color={color}
         />
-        <span className={badgeSize}>{badgeContent ? badgeContent : ""}</span>
+        <span className={`badge-number--${size}`}>
+          {badgeContent && content.current}
+        </span>
       </button>
     </div>
   );
+};
+
+Badge.defaultProps = {
+  size: "medium",
+  rotate: 180,
+  icon: "email",
+};
+
+Badge.propTypes = {
+  badgeContent: PropTypes.number,
+  color: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Badge;
