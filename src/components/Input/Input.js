@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import "./Input.css";
+import { getClass, getStyle, getHelperClass } from "./styles";
+
 
 const TextFieldInput = ({
+  className,
   label,
   variant,
   required,
@@ -12,29 +15,42 @@ const TextFieldInput = ({
   helperText,
   error,
   placeholder,
-  onChange
+  onChange,
+  value,
+  id
 }) => {
+  const [inputValue, setInputValue] = useState(value);
+
+  const handleOnChange = (e) => {
+    setInputValue(e.target.value);
+    return onChange(e)
+  };
+
+  useEffect(() => () => getStyle(placeholder, inputValue, variant), [inputValue]);
+
   return (
-    <div className="container">
+    <div className={className ? className : "container"}>
       <input
-        onChange={onChange}
+        id={id}
+        value={value}
+        onChange={handleOnChange}
         type={"text"}
-        className={error ? `${variant} error` : `${variant}`}
+        className={getClass(variant, error)}
         placeholder={placeholder}
         disabled={disabled}
-        {...(readOnly && { readOnly })}
+        readOnly={readOnly}
         defaultValue={defaultValue}
       />
       <label
-        className={error ? `${variant}-text error` : `${variant}-text`}
-        style={placeholder ? { transform: variant === "outlined" ? "translateY(-4.3em)" : "translateY(-3.3em)", fontSize: "0.90em" } : {}}
+        className={getClass(`${variant}-text`, error)}
+        style={getStyle(placeholder, inputValue, variant)}
       >
         {label}
         {required && " *"}
       </label>
-      {helperText && <span className={error ? "helper-text error" : "helper-text"}>{helperText}</span>}
+      {helperText && <span className={getHelperClass(error)}>{helperText}</span>}
     </div >
-  );
+  )
 };
 
 TextFieldInput.defaultProps = {
@@ -46,11 +62,14 @@ TextFieldInput.propTypes = {
   placeholder: PropTypes.string,
   helperText: PropTypes.string,
   defaultValue: PropTypes.string,
+  id: PropTypes.string,
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   readOnly: PropTypes.bool,
   required: PropTypes.bool,
   error: PropTypes.bool,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  value: PropTypes.any
 };
 
 export default TextFieldInput;

@@ -115,13 +115,14 @@
 
 .outlined:focus + .outlined-text {
   transform: translateY(-3.8em) scale(0.8);
-  color: rgb(63, 62, 62);
+  color: rgb(218, 52, 52);
 }
 
 .helper-text {
-  margin-top: -20px;
+  width: fit-content;
   font-size: 12px;
-  margin-left: 12px;
+  margin-top: -15px;
+  margin-left: 2px;
   color: #0f6662c7;
 }
 
