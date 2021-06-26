@@ -23,10 +23,10 @@ const TextFieldInput = ({
 
   const handleOnChange = (e) => {
     setInputValue(e.target.value);
-    return onChange(e)
+    onChange(e);
   };
 
-  useEffect(() => () => getStyle(placeholder, inputValue, variant), [inputValue]);
+  useEffect(() => () => { getStyle(placeholder, inputValue, variant) }, [inputValue]);
 
   return (
     <div className={className ? className : "container"}>
@@ -34,7 +34,7 @@ const TextFieldInput = ({
         id={id}
         value={value}
         onChange={handleOnChange}
-        type={"text"}
+        type="text"
         className={getClass(variant, error)}
         placeholder={placeholder}
         disabled={disabled}
@@ -54,7 +54,8 @@ const TextFieldInput = ({
 };
 
 TextFieldInput.defaultProps = {
-  variant: "standard"
+  variant: "standard",
+  onChange: () => { }
 };
 
 TextFieldInput.propTypes = {
