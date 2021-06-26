@@ -10,7 +10,6 @@ import {
   mdiAlertCircle,
 } from "@mdi/js";
 import "./Badge.css";
-import { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 const iconTypes = {
@@ -32,32 +31,23 @@ const badgeSizes = {
 
 const getIcon = (icon) => `${iconTypes[icon]}`;
 
-const Badge = ({ size, rotate, color, icon, badgeContent, onClick }) => {
-  const content = useRef(badgeContent);
-  useEffect(() => {
-    if (badgeContent > 999) {
-      content.current = "+999";
-    }
-  }, [content]);
-
-  return (
-    <div>
-      <button className="badge-container" onClick={onClick}>
-        <Icon
-          path={getIcon(icon)}
-          size={badgeSizes[size]}
-          horizontal
-          vertical
-          rotate={rotate}
-          color={color}
-        />
-        <span className={`badge-number--${size}`}>
-          {badgeContent && content.current}
-        </span>
-      </button>
-    </div>
-  );
-};
+const Badge = ({ size, rotate, color, icon, badgeContent, onClick }) => (
+  <div>
+    <button className="badge-container" onClick={onClick}>
+      <Icon
+        path={getIcon(icon)}
+        size={badgeSizes[size]}
+        horizontal
+        vertical
+        rotate={rotate}
+        color={color}
+      />
+      <span className={`badge-number--${size}`}>
+        {badgeContent > 999 ? "+999" : badgeContent}
+      </span>
+    </button>
+  </div>
+);
 
 Badge.defaultProps = {
   size: "medium",
