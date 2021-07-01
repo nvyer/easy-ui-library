@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./slider.css";
 
-export const Slider = ({
+const Slider = ({
   step = 1,
   min = 0,
   max = 100,
@@ -26,7 +26,7 @@ export const Slider = ({
     switch (sliderColor) {
       case "primary":
         return "#1DD4CE";
-      case "description":
+      case "destructive":
         return "#2C3E50";
       default:
         return "#989292";
@@ -142,3 +142,5 @@ export const Slider = ({
     </div>
   );
 };
+
+export default Slider;

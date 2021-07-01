@@ -66,7 +66,7 @@ const useStyles = createUseStyles({
     },
     tablePagination: {
         borderBottom: "0.50px solid #2C3E50",
-        width: "518px",
+        width: "491px",
         display: "flex",
         justifyContent: "flex-end",
         alignItems: "center",
@@ -86,7 +86,7 @@ const useStyles = createUseStyles({
         backgroundPosition: "center",
         transition: "background 0.8s",
         "&:hover": {
-            background: "#9bdccf  radial-gradient(circle, transparent 1%, #9bdccf 1%) center/15000%",
+            fill: "#1DD4CE"
         },
         "&:active": {
             backgroundColor: "white",
