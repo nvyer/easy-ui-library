@@ -3,17 +3,23 @@ import Tooltip from "../components/Tooltip/tooltip";
 import Button from "../components/Button/Button";
 
 const TooltipStory = () => {
-  const primaryTooltip = `<Tooltip tooltipStyle="tooltip--primary" content="Hello" position="top">
+  const primaryTooltip = `
+  <Tooltip tooltipStyle="tooltip--primary" content="Hello" position="top">
    <Button>Easy-UI</Button>
-   </Tooltip>`;
+  </Tooltip>
+  `;
 
-  const destructiveTooltip = `<Tooltip tooltipStyle="tooltip--destructive" content="Hello" position="bottom">
+  const destructiveTooltip = `
+  <Tooltip tooltipStyle="tooltip--destructive" content="Hello" position="bottom">
    <Button>Easy-UI</Button>
-   </Tooltip>`;
+  </Tooltip>
+  `;
 
-  const neutralTooltip = `<Tooltip tooltipStyle="tooltip--neutral" content="Hello" position="top--right">
+  const neutralTooltip = `
+  <Tooltip tooltipStyle="tooltip--neutral" content="Hello" position="top--right">
    <Button>Easy-UI</Button>
-   </Tooltip>`;
+  </Tooltip>
+  `;
 
   return (
     <>
@@ -26,7 +32,7 @@ const TooltipStory = () => {
         <Tooltip tooltipStyle="tooltip--primary" content="Hello" position="top">
           <Button>Easy-UI</Button>
         </Tooltip>
-        <h3 className="component-code">{primaryTooltip}</h3>
+        <pre className="component-code long">{primaryTooltip}</pre>
       </div>
 
       <div className="component-container">
@@ -38,7 +44,7 @@ const TooltipStory = () => {
         >
           <Button>Easy-UI</Button>
         </Tooltip>
-        <h3 className="component-code">{destructiveTooltip}</h3>
+        <pre className="component-code long">{destructiveTooltip}</pre>
       </div>
 
       <div className="component-container">
@@ -50,7 +56,7 @@ const TooltipStory = () => {
         >
           <Button>Easy-UI</Button>
         </Tooltip>
-        <h3 className="component-code">{neutralTooltip}</h3>
+        <pre className="component-code long">{neutralTooltip}</pre>
       </div>
     </>
   );

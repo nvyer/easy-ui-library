@@ -10,17 +10,21 @@ const BreadCrumbsStory = () => {
     </BreadCrumbs>
   `;
 
-  const destructiveBreadCrumbs = `<BreadCrumbs separator="|" breadcrumbsStyle="crumbs--destructive">
+  const destructiveBreadCrumbs = `
+  <BreadCrumbs separator="|" breadcrumbsStyle="crumbs--destructive">
     <a>Google</a>
     <a>FaceBook</a>
     <a>Instagram</a>
-  </BreadCrumbs>`;
+  </BreadCrumbs>
+  `;
 
-  const tagBreadCrumbs = `<BreadCrumbs separator="|" tag>
-  <a>Google</a>
-  <a>FaceBook</a>
-  <a>Instagram</a>
-</BreadCrumbs>`;
+  const tagBreadCrumbs = `
+  <BreadCrumbs separator="|" tag>
+    <a>Google</a>
+    <a>FaceBook</a>
+    <a>Instagram</a>
+  </BreadCrumbs>
+  `;
 
   return (
     <>
@@ -32,7 +36,7 @@ const BreadCrumbsStory = () => {
           <a>FaceBook</a>
           <a>Instagram</a>
         </BreadCrumbs>
-        <pre className="component-code">{primaryBreadCrumbs}</pre>
+        <pre className="component-code long">{primaryBreadCrumbs}</pre>
       </div>
 
       <div className="component-container">
@@ -42,7 +46,7 @@ const BreadCrumbsStory = () => {
           <a>FaceBook</a>
           <a>Instagram</a>
         </BreadCrumbs>
-        <pre className="component-code">{destructiveBreadCrumbs}</pre>
+        <pre className="component-code long">{destructiveBreadCrumbs}</pre>
       </div>
 
       <div className="component-container">
@@ -52,7 +56,7 @@ const BreadCrumbsStory = () => {
           <a>FaceBook</a>
           <a>Instagram</a>
         </BreadCrumbs>
-        <pre className="component-code">{tagBreadCrumbs}</pre>
+        <pre className="component-code long">{tagBreadCrumbs}</pre>
       </div>
 
       <div className="component-container">
@@ -65,7 +69,7 @@ const BreadCrumbsStory = () => {
           <a>Linkdin</a>
           <a>VK</a>
         </BreadCrumbs>
-        <pre className="component-code">{tagBreadCrumbs}</pre>
+        <pre className="component-code long">{tagBreadCrumbs}</pre>
       </div>
     </>
   );

@@ -7,19 +7,21 @@ import Button from "../components/Button/Button";
 
 const StepperStory = () => {
   const [activeStep, setActiveStep] = useState(0);
-  const basicStepper = `<Stepper activeStep={1}>
-          <Step id={1}>
-              <StepLabel>Step 1</StepLabel>
-          </Step>
-              <StepperConnector />
-          <Step id={2}>
-              <StepLabel>Step 2</StepLabel>
-          </Step>
-              <StepperConnector />
-          <Step id={3}>
-              <StepLabel>Step 3</StepLabel>
-          </Step>
-  </Stepper>`;
+  const basicStepper = `
+  <Stepper activeStep={1}>
+      <Step id={1}>
+        <StepLabel>Step 1</StepLabel>
+      </Step>
+      <StepperConnector />
+      <Step id={2}>
+        <StepLabel>Step 2</StepLabel>
+      </Step>
+      <StepperConnector />
+      <Step id={3}>
+         <StepLabel>Step 3</StepLabel>
+      </Step>
+  </Stepper>
+  `;
 
   return (
     <div className="component-container">

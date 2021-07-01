@@ -9,7 +9,8 @@ import TableFooter from "../components/Table/tableFooter";
 import TablePagination from "../components/Table/tablePagination";
 
 const TableStory = () => {
-  const table = `<TableContainer >
+  const table = `
+  <TableContainer >
     <Table size="medium" >
          <TableHead >
              <TableRow selected>
@@ -38,7 +39,8 @@ const TableStory = () => {
                   rowsPerPageOptions={[5]} />
             </TableFooter>
     </Table>
-</TableContainer>)`;
+</TableContainer>
+`;
 
   function createData(name, calories, fat, carbs, protein) {
     return { name, calories, fat, carbs, protein };

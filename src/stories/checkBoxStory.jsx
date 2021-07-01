@@ -7,11 +7,13 @@ const CheckBoxStory = () => {
   const checked = `<CheckBox checked />`;
   const disabled = `<CheckBox disabled checked />`;
   const indeterminate = `<CheckBox indeterminate />`;
-  const accessibility = `<CheckBox
+  const accessibility = `
+  <CheckBox
     className="customClassName"
     value="checkedA"
     onChange={(e) => console.log(e.target.value)}
-    />`;
+  />
+  `;
 
   return (
     <div>

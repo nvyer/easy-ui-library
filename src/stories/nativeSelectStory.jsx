@@ -2,25 +2,33 @@ import React from "react";
 import NativeSelect from "../components/Select/native-select";
 
 const NativeSelectStory = () => {
-  const primaryNativeSelect = `<NativeSelect>
+  const primaryNativeSelect = `
+  <NativeSelect>
     <option>Google</option>
     <option>FaceBook</option>
-  </NativeSelect>`;
+  </NativeSelect>
+  `;
 
-  const neutralNativeSelect = `<NativeSelect selectStyle="native--select--neutral">
-  <option>Google</option>
-  <option>FaceBook</option>
-</NativeSelect>`;
+  const neutralNativeSelect = `
+  <NativeSelect selectStyle="native--select--neutral">
+    <option>Google</option>
+    <option>FaceBook</option>
+  </NativeSelect>
+  `;
 
-  const darkNativeSelect = `<NativeSelect selectStyle="native--select--dark">
-  <option>Google</option>
-  <option>FaceBook</option>
-</NativeSelect>`;
+  const darkNativeSelect = `
+  <NativeSelect selectStyle="native--select--dark">
+    <option>Google</option>
+    <option>FaceBook</option>
+  </NativeSelect>
+  `;
 
-  const normalNativeSelect = `<NativeSelect selectStyle="native--select--normal">
-  <option>Google</option>
-  <option>FaceBook</option>
-</NativeSelect>`;
+  const normalNativeSelect = `
+  <NativeSelect selectStyle="native--select--normal">
+    <option>Google</option>
+    <option>FaceBook</option>
+  </NativeSelect>
+  `;
 
   return (
     <>
@@ -34,7 +42,7 @@ const NativeSelectStory = () => {
           <option>Google</option>
           <option>FaceBook</option>
         </NativeSelect>
-        <pre className="component-code">{primaryNativeSelect}</pre>
+        <pre className="component-code long">{primaryNativeSelect}</pre>
       </div>
 
       <div className="component-container">
@@ -43,7 +51,7 @@ const NativeSelectStory = () => {
           <option>Google</option>
           <option>FaceBook</option>
         </NativeSelect>
-        <pre className="component-code">{neutralNativeSelect}</pre>
+        <pre className="component-code long">{neutralNativeSelect}</pre>
       </div>
 
       <div className="component-container">
@@ -52,7 +60,7 @@ const NativeSelectStory = () => {
           <option>Google</option>
           <option>FaceBook</option>
         </NativeSelect>
-        <pre className="component-code">{darkNativeSelect}</pre>
+        <pre className="component-code long">{darkNativeSelect}</pre>
       </div>
 
       <div className="component-container">
@@ -61,7 +69,7 @@ const NativeSelectStory = () => {
           <option>Google</option>
           <option>FaceBook</option>
         </NativeSelect>
-        <pre className="component-code">{normalNativeSelect}</pre>
+        <pre className="component-code long">{normalNativeSelect}</pre>
       </div>
     </>
   );

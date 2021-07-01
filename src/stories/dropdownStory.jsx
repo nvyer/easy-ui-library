@@ -2,25 +2,33 @@ import React from "react";
 import DropDown from "../components/DropDown/dropdown";
 
 const DropDownStory = () => {
-  const primaryDropDown = `<DropDown dropDownTitle="Site">
-          <a id={1} href="https://www.google.com/">Google</a>
-          <a id={2} href="https://www.facebook.com/">Facebook</a>
-        </DropDown>`;
+  const primaryDropDown = `
+  <DropDown dropDownTitle="Site">
+    <a id={1} href="https://www.google.com/">Google</a>
+    <a id={2} href="https://www.facebook.com/">Facebook</a>
+  </DropDown>
+  `;
 
-  const destructiveDropDown = `<DropDown dropDownTitle="Site" dropDownStyle="dropdown--destructive">
-        <a id={1} href="https://www.google.com/">Google</a>
-        <a id={2} href="https://www.facebook.com/">Facebook</a>
-      </DropDown>`;
+  const destructiveDropDown = `
+  <DropDown dropDownTitle="Site" dropDownStyle="dropdown--destructive">
+    <a id={1} href="https://www.google.com/">Google</a>
+    <a id={2} href="https://www.facebook.com/">Facebook</a>
+  </DropDown>
+  `;
 
-  const neutralDropDown = `<DropDown dropDownTitle="Site" dropDownStyle="dropdown--neutral">
-      <a id={1} href="https://www.google.com/">Google</a>
-      <a id={2} href="https://www.facebook.com/">Facebook</a>
-      </DropDown>`;
+  const neutralDropDown = `
+  <DropDown dropDownTitle="Site" dropDownStyle="dropdown--neutral">
+    <a id={1} href="https://www.google.com/">Google</a>
+    <a id={2} href="https://www.facebook.com/">Facebook</a>
+  </DropDown>
+  `;
 
-  const searchDropDown = `<DropDown dropDownTitle="Site" search>
-      <a id={1} href="https://www.google.com/">Google</a>
-      <a id={2} href="https://www.facebook.com/">Facebook</a>
-      </DropDown>`;
+  const searchDropDown = `
+  <DropDown dropDownTitle="Site" search>
+    <a id={1} href="https://www.google.com/">Google</a>
+    <a id={2} href="https://www.facebook.com/">Facebook</a>
+  </DropDown>
+  `;
 
   return (
     <>
@@ -37,7 +45,7 @@ const DropDownStory = () => {
             Facebook
           </a>
         </DropDown>
-        <pre className="component-code">{primaryDropDown}</pre>
+        <pre className="component-code long">{primaryDropDown}</pre>
       </div>
 
       <div className="component-container">
@@ -50,7 +58,7 @@ const DropDownStory = () => {
             Facebook
           </a>
         </DropDown>
-        <pre className="component-code">{destructiveDropDown}</pre>
+        <pre className="component-code long">{destructiveDropDown}</pre>
       </div>
 
       <div className="component-container">
@@ -63,7 +71,7 @@ const DropDownStory = () => {
             Facebook
           </a>
         </DropDown>
-        <pre className="component-code">{neutralDropDown}</pre>
+        <pre className="component-code long">{neutralDropDown}</pre>
       </div>
 
       <div className="component-container">
@@ -76,7 +84,7 @@ const DropDownStory = () => {
             Facebook
           </a>
         </DropDown>
-        <pre className="component-code">{searchDropDown}</pre>
+        <pre className="component-code long">{searchDropDown}</pre>
       </div>
     </>
   );

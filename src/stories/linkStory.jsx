@@ -4,11 +4,12 @@ import Link from "../components/Link/link";
 const LinkStory = () => {
   const defaultLink = `<Link to={"https://github.com/aca-dec-2020/ui-lib"}>Easy-UI</Link>`;
   const secondaryLink = `<Link color="secondary" to={"https://github.com/aca-dec-2020/ui-lib"}>Easy-UI</Link>`;
-  let accesibility = `  <Link
+  let accesibility = `
+  <Link
     onClick={() => console.log("clicked")}
     color="secondary"
-    to={"https://github.com/aca-dec-2020/ui-lib"}>
-    Easy-UI
+    to={"https://github.com/aca-dec-2020/ui-lib"}
+      >Easy-UI
   </Link>`;
 
   return (

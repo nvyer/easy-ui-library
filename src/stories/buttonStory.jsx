@@ -2,46 +2,69 @@ import React from "react";
 import Button from "../components/Button/Button";
 
 const ButtonStory = () => {
-  const primaryButton = `<Button
-  onClick={(e) => console.log(e)}
-  buttonStyle="btn--primary--normal"
-    >Easy-UI
-  </Button>`;
-  const destructiveButton = `<Button
-   onClick={(e) => console.log(e)}
-   buttonStyle="btn--primary--destructive"
-    >Easy-UI
- </Button>`;
-  const secondaryNormalButton = `<Button
-  onClick={(e) => console.log(e)}
-  buttonStyle="secondary--normal"
-    >Easy-UI
- </Button>`;
-  const secondaryDestructiveButton = `<Button
+  const primaryButton = `
+  <Button
+    onClick={(e) => console.log(e)}
+    buttonStyle="btn--primary--normal"
+      >Easy-UI
+  </Button>
+  `;
+
+  const destructiveButton = `
+  <Button
+    onClick={(e) => console.log(e)}
+    buttonStyle="btn--primary--destructive"
+      >Easy-UI
+  </Button>
+  `;
+
+  const secondaryNormalButton = `
+  <Button
+    onClick={(e) => console.log(e)}
+    buttonStyle="secondary--normal"
+      >Easy-UI
+  </Button>
+  `;
+
+  const secondaryDestructiveButton = `
+  <Button
     onClick={(e) => console.log(e)}
     buttonStyle="secondary--destructive"
-    >Easy-UI
- </Button>`;
-  const subtleNormalButton = `<Button
+      >Easy-UI
+  </Button>
+  `;
+
+  const subtleNormalButton = `
+  <Button
     onClick={(e) => console.log(e)}
     buttonStyle="subtle--normal"
-  >Easy-UI
- </Button>`;
-  const subtleDestructiveButton = `<Button
+      >Easy-UI
+  </Button>
+  `;
+
+  const subtleDestructiveButton = `
+  <Button
     onClick={(e) => console.log(e)}
     buttonStyle="subtle--destructive"
-  >Easy-UI
- </Button>`;
-  const isLoadingButton = `<Button
+      >Easy-UI
+  </Button>
+  `;
+
+  const isLoadingButton = `
+  <Button
     onClick={(e) => console.log(e)}
     isLoading
-  >Easy-UI
- </Button>`;
-  const disabledButton = `<Button
+      >Easy-UI
+  </Button>
+  `;
+
+  const disabledButton = `
+  <Button
     onClick={(e) => console.log(e)}
     disabled
-  >Easy-UI
- </Button>`;
+      >Easy-UI
+  </Button>
+  `;
 
   return (
     <>
