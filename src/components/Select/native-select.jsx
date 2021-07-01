@@ -11,12 +11,9 @@ const NativeSelect = ({
   disabled,
   selectStyle,
   placeholder,
-  autoFocus,
   form,
   multiple,
   name,
-  required,
-  size,
 }) => {
   const checkSelectStyle = STYLES.includes(selectStyle)
     ? selectStyle
@@ -27,12 +24,9 @@ const NativeSelect = ({
       onChange={onChange}
       disabled={disabled}
       placeholder={placeholder}
-      autoFocus={autoFocus}
       form={form}
       multiple={multiple}
       name={name}
-      required={required}
-      size={size}
     >
       {children}
     </select>

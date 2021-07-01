@@ -8,7 +8,7 @@ export const useLoaderStyles = createUseStyles({
         height: "fit-content"
     },
     loaderLabel: {
-        color: "#fff"
+        color: "#989292"
     },
     "@keyframes spin": {
         from: { transform: "rotate(0deg)" },

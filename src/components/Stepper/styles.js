@@ -6,6 +6,7 @@ export const useStepperStyles = createUseStyles({
         display: "flex",
         margin: "0 auto",
         padding: 24,
+        minWidth: "400px",
         alignItems: "flex-start",
         flexDirection: "row",
         backgroundColor: "#fff",

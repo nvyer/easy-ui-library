@@ -22,12 +22,12 @@ const getColor = ({ isDisabled, error }) => {
 const Step = ({ error, checked, disabled, id, children }) => {
     const [isDisabled, setIsDisabled] = useState(disabled);
     const [isChecked, setIsChecked] = useState(checked);
-    const [isActive, seiIsActive] = useState();
+    const [isActive, setIsActive] = useState();
     const activeStep = useContext(CurrentStep);
 
     useEffect(() => {
         if (!activeStep && !error && !isChecked) {
-            seiIsActive(true);
+            setIsActive(true);
         }
     }, [activeStep, error, isChecked]);
 
@@ -43,6 +43,7 @@ const Step = ({ error, checked, disabled, id, children }) => {
             setIsDisabled(false);
         } else if (id > activeStep) {
             setIsActive(true);
+            setIsChecked(false);
             setIsDisabled(true);
         }
     }, [id, activeStep])
@@ -59,9 +60,9 @@ const Step = ({ error, checked, disabled, id, children }) => {
         >
             <span className={classes.stepWrapper}>
                 <span>
-                    {isActive && GetActiveIcon({ id, classes, isDisabled })}
-                    {error && GetErrorIcon({ isDisabled })}
-                    {isChecked && !error && GetCheckedIcon({ isDisabled, classes })}
+                    {isActive && getActiveIcon({ id, classes, isDisabled })}
+                    {error && getErrorIcon({ isDisabled })}
+                    {isChecked && !error && getCheckedIcon({ isDisabled, classes })}
                 </span>
                 {children}
             </span>
