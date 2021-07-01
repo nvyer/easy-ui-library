@@ -2,16 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import "./dropdown.css";
 import icon from "./down-arrow-2_icon-icons.com_70191.png";
 
-const STYLES = [
-  "dropdown--primary",
-  "dropdown--description",
-  "dropdown--neutral",
-];
 let contentStyle = "";
 let contentItemStyle = "";
 let titleStyle = "";
 
-export const DropDown = ({
+const DropDown = ({
   children,
   dropDownTitle,
   dropDownStyle,
@@ -20,10 +15,6 @@ export const DropDown = ({
   const [isBloc, setIsBloc] = useState(false);
   const [contentItems, setContentItems] = useState(children);
   const ref = useRef(null);
-
-  const checkSelectStyle = STYLES.includes(dropDownStyle)
-    ? dropDownStyle
-    : STYLES[0];
 
   const hideShowDropDown = () => {
     !isBloc ? setIsBloc(true) : setIsBloc(false);
@@ -68,22 +59,27 @@ export const DropDown = ({
       contentStyle = "dropdown--primary--content";
       titleStyle = "dropdown--primary--title";
       break;
-    case "dropdown--description":
-      contentItemStyle = "dropdown--description--content-item";
-      contentStyle = "dropdown--description--content";
-      titleStyle = "dropdown--description--title";
+    case "dropdown--destructive":
+      contentItemStyle = "dropdown--destructive--content-item";
+      contentStyle = "dropdown--destructive--content";
+      titleStyle = "dropdown--destructive--title";
       break;
     case "dropdown--neutral":
       contentItemStyle = "dropdown--neutral--content-item";
       contentStyle = "dropdown--neutral--content";
       titleStyle = "dropdown--neutral--title";
+      break;
+    default:
+      contentItemStyle = "dropdown--primary--content-item";
+      contentStyle = "dropdown--primary--content";
+      titleStyle = "dropdown--primary--title";
   }
 
   return (
     <div
       onClick={hideShowDropDown}
       ref={ref}
-      className={`dropdown ${checkSelectStyle}`}
+      className={`dropdown ${dropDownStyle}`}
     >
       <div className={`${titleStyle}`}>
         {search ? (
@@ -107,3 +103,5 @@ export const DropDown = ({
     </div>
   );
 };
+
+export default DropDown;

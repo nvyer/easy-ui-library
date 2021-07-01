@@ -1,3 +1,16 @@
+.component-container {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.component-title {
+  font-size: large;
+  font-family: monospace;
+}
+
 .component-code {
   font-size: 16px;
   background-color: #141035;
@@ -7,17 +20,6 @@
   padding: 6px;
   width: fit-content;
   margin-bottom: 5px;
-}
-.component-title {
-  font-size: large;
-  font-family: monospace;
-}
-.component-container {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid black;
-  margin-bottom: 20px;
-  padding: 10px;
 }
 
 .long {
