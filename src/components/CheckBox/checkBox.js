@@ -32,7 +32,7 @@ const CheckBox = ({ className, color, value, checked, indeterminate, onChange, d
                     xmlns="http://www.w3.org/2000/svg"
                     width="15"
                     height="15"
-                    viewBox="-2.5 1.9 27 27">
+                    viewBox="-2.5 -1.7 27 27">
                     <path d={getPath(indeterminate, clicked)} />
                 </svg>
             </div>

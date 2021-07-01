@@ -1,0 +1,15 @@
+.code {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  background-color: #141035;
+  display: inline-block;
+  color: white;
+  font-family: monospace;
+  padding: 6px;
+  width: fit-content;
+}
+
+.long {
+  width: 1064px;
+}
