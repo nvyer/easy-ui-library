@@ -6,6 +6,7 @@
     width: 240px;
     display: flex;
     overflow: hidden;
+    color: white;
   }
   .drop-down-icon {
     width: 23px;
@@ -26,9 +27,10 @@
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
   }
   .dropdown--primary {
-    color: black;
+    color: white;
     z-index: 2;
   }
   .dropdown--description {
@@ -59,7 +61,7 @@
     z-index: 1;
   }
   .dropdown--primary--content-item,
-  .dropdown--description--content-item,
+  .dropdown--destructive--content-item,
   .dropdown--neutral--content-item {
     text-decoration: none;
     cursor: pointer;
@@ -70,38 +72,38 @@
   }
   .dropdown--neutral--title,
   .dropdown--primary--title,
-  .dropdown--description--title {
+  .dropdown--destructive--title {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
   .dropdown--neutral--content,
   .dropdown--primary--content,
-  .dropdown--description--content {
+  .dropdown--destructive--content {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
   .dropdown--primary--content-item {
-    color: black;
+    color: white;
   }
   .dropdown--primary--content-item:hover {
     background: #1dd4ce;
   }
-  .dropdown--description--content-item {
+  .dropdown--destructive--content-item {
     color: white;
   }
-  .dropdown--description--title:hover {
+  .dropdown--destructive--title:hover {
     background: #2c3e508e;
   }
-  .dropdown--description--content-item:hover {
+  .dropdown--destructive--content-item:hover {
     background: #2c3e50;
   }
-  .dropdown--description--content {
+  .dropdown--destructive--content {
     background-color: #516375;
     width: inherit;
     position: absolute;
     z-index: 1;
   }
-  .dropdown--description--title {
+  .dropdown--destructive--title {
     background: #2c3e50;
     color: white;
   }

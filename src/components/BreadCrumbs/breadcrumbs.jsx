@@ -1,7 +1,7 @@
 import { cloneElement, useEffect, useState } from "react";
 import "./breadcrumbs.css";
 
-export const BreadCrumbs = ({ children, breadcrumbsStyle, separator, tag }) => {
+const BreadCrumbs = ({ children, breadcrumbsStyle, separator, tag }) => {
   const [isHiddenCrumb, setIsHiddenCrumb] = useState(false);
   const lastItemIndex = children.length - 1;
   const lastItem = children[children.length - 1];
@@ -17,6 +17,9 @@ export const BreadCrumbs = ({ children, breadcrumbsStyle, separator, tag }) => {
   };
 
   const renderCrumbs = (crumbs) => {
+    if(!breadcrumbsStyle){
+      breadcrumbsStyle = "crumbs--primary"
+    }
     return crumbs.map((el, idx) => {
       return lastItemIndex === idx ? (
         <span key={idx}>
@@ -69,3 +72,5 @@ export const BreadCrumbs = ({ children, breadcrumbsStyle, separator, tag }) => {
     </nav>
   );
 };
+
+export default BreadCrumbs;
