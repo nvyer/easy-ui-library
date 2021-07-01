@@ -7,7 +7,9 @@ const TagStory = () => {
 
   return (
     <div>
-      <p>Props: className, placeholder, type</p>
+      <p style={{ fontWeight: 700 }}>
+        Props: className, placeholder, type(primary,secondary)
+      </p>
       <div className="component-container">
         <p className="component-title">Default</p>
         <Tag />

@@ -1,8 +1,9 @@
+import React from "react";
 import Select from "../components/Select/select";
 import { Option, GroupOptions } from "../components/Select/select";
 
-const selectStory = () => {
-    const selectOneOption = `<Select placeholder="Select">
+const SelectStory = () => {
+  const selectOneOption = `<Select placeholder="Select">
     <Option>Google</Option>
     <Option>Facebook</Option>
   </Select>`;
@@ -27,11 +28,12 @@ const selectStory = () => {
   <Option>Facebook</Option>
 </GroupOptions>
 </Select>`;
+
   return (
     <>
-      <h4>
+      <p style={{ fontWeight: 700 }}>
         Props: placeholder, value, onChange, id, multypleType = list,block{" "}
-      </h4>
+      </p>
       <div className="component-container">
         <p className="component-title">Select one Option</p>
         <Select placeholder="Select">
@@ -75,6 +77,6 @@ const selectStory = () => {
       </div>
     </>
   );
-}
+};
 
-export default selectStory;
+export default SelectStory;

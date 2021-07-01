@@ -1,13 +1,13 @@
 import { storiesOf } from "@storybook/react";
-import buttonStory from "./button";
-import dropDownStory from "./dropdown";
-import nativeSelectStory from "./nativeselect";
-import selectStory from "./select";
-import breadCrumbsStory from "./breadcrumbs";
-import tooltipStory from "./tooltip";
-import sliderStory from "./slider";
-import loaderStory from "./loader";
-import textFieldInputStory from "./input";
+import ButtonStory from "./buttonStory";
+import DropDownStory from "./dropdownStory";
+import NativeSelectStory from "./nativeSelectStory";
+import SelectStory from "./selectStory";
+import BreadCrumbsStory from "./breadcrumbsStory";
+import TooltipStory from "./tooltipStory";
+import SliderStory from "./sliderStory";
+import LoaderStory from "./loaderStory";
+import TextFieldInputStory from "./inputStory";
 import CheckBoxStory from "./checkBoxStory";
 import LinkStory from "./linkStory";
 import TableStory from "./tableStory";
@@ -20,17 +20,17 @@ import "./styles.css";
 
 const stories = storiesOf("Components", module);
 
-stories.add("Button", buttonStory);
+stories.add("Button", ButtonStory);
 
-stories.add("DropDown", dropDownStory);
+stories.add("DropDown", DropDownStory);
 
-stories.add("NativeSelect", nativeSelectStory);
+stories.add("NativeSelect", NativeSelectStory);
 
-stories.add("Select", selectStory);
+stories.add("Select", SelectStory);
 
-stories.add("BreadCrumbs", breadCrumbsStory);
+stories.add("BreadCrumbs", BreadCrumbsStory);
 
-stories.add("Tooltip", tooltipStory);
+stories.add("Tooltip", TooltipStory);
 
 stories.add("CheckBox", CheckBoxStory);
 
@@ -46,9 +46,8 @@ stories.add("Tag", TagStory);
 
 stories.add("Stepper", StepperStory);
 
-stories.add("Slider", sliderStory);
+stories.add("Slider", SliderStory);
 
-stories.add("Loader", loaderStory);
+stories.add("Loader", LoaderStory);
 
-stories.add("Input", textFieldInputStory);
-
+stories.add("Input", TextFieldInputStory);

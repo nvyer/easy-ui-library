@@ -12,7 +12,10 @@ const BadgeStory = () => {
 
   return (
     <div>
-      <p>Props:size, rotate, color, icon, badgeContent, onClick</p>
+      <p style={{ fontWeight: 700 }}>
+        Props:size(small,medium,large), rotate, color, icon, badgeContent,
+        onClick
+      </p>
       <div className="component-container">
         <p className="component-title">Default</p>
         <Badge color="#bf73ff" />

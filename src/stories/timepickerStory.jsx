@@ -3,9 +3,10 @@ import TimePicker from "../components/TimePicker/timePicker";
 
 const TimepickerStory = () => {
   const timePicker = `<TimePicker />`;
+
   return (
     <>
-      <p>Props: className</p>
+      <p style={{ fontWeight: 700 }}>Props: className</p>
       <div style={{ alignItems: "center" }} className="component-container">
         <p className="component-title">Time Picker</p>
         <TimePicker />

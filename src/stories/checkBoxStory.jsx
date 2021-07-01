@@ -15,9 +15,9 @@ const CheckBoxStory = () => {
 
   return (
     <div>
-      <p>
-        Props: className, color, value, checked, indeterminate,
-        onChange,disabled
+      <p style={{ fontWeight: 700 }}>
+        Props: className, color(primary,secondary), value, checked,
+        indeterminate, onChange,disabled
       </p>
       <div className="component-container">
         <p className="component-title">Default</p>

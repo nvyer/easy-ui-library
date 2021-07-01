@@ -54,8 +54,8 @@ const TableStory = () => {
 
   return (
     <div className="component-container">
-      <p>
-        Props: size, onClick, selected,hover
+      <p style={{ fontWeight: 700 }}>
+        Props: size(small, medium), onClick, selected, hover
         <br />
         <br />
         Table pagination props: className, rowsPerPageOptions,

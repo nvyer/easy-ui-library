@@ -1,16 +1,18 @@
+import React from "react";
 import Slider from "../components/Slider/slider";
 
-const sliderStory = () => {
-    const primarySlider = `<Slider sliderColor="primary"/>`;
+const SliderStory = () => {
+  const primarySlider = `<Slider sliderColor="primary"/>`;
   const destructiveSlider = `<Slider sliderColor="destructive"/>`;
   const stepSlider = `<Slider step={10} min={0} max={100} sliderColor="destructive" marks label/>`;
   const disabledSlider = `<Slider disabled />`;
+
   return (
     <>
-      <h4>
+      <p style={{ fontWeight: 700 }}>
         Props: step, min, max, defaultValue, onChange disabled, marks, label,
         sliderColor
-      </h4>
+      </p>
       <div className="component-container">
         <p className="component-title">Primary</p>
         <Slider sliderColor="primary" />
@@ -51,6 +53,6 @@ const sliderStory = () => {
       </div>
     </>
   );
-}
+};
 
-export default sliderStory;
+export default SliderStory;

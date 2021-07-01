@@ -1,7 +1,8 @@
+import React from "react";
 import BreadCrumbs from "../components/BreadCrumbs/breadcrumbs";
 
-const breadCrumbsStory = () => {
-    const primaryBreadCrumbs = `
+const BreadCrumbsStory = () => {
+  const primaryBreadCrumbs = `
     <BreadCrumbs separator=" >" breadcrumbsStyle="crumbs--primary">
       <a>Google</a>
       <a>FaceBook</a>
@@ -20,9 +21,10 @@ const breadCrumbsStory = () => {
   <a>FaceBook</a>
   <a>Instagram</a>
 </BreadCrumbs>`;
+
   return (
     <>
-      <h4>Props: breadcrumbsStyle, separator, tag</h4>
+      <p style={{ fontWeight: 700 }}>Props: breadcrumbsStyle, separator, tag</p>
       <div className="component-container">
         <p className="component-title">Primary</p>
         <BreadCrumbs separator=">" breadcrumbsStyle="crumbs--primary">
@@ -67,6 +69,6 @@ const breadCrumbsStory = () => {
       </div>
     </>
   );
-}
+};
 
-export default breadCrumbsStory;
+export default BreadCrumbsStory;

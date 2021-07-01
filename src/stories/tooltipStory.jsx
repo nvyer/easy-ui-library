@@ -1,8 +1,9 @@
+import React from "react";
 import Tooltip from "../components/Tooltip/tooltip";
 import Button from "../components/Button/Button";
 
-const tooltipStory = () => {
-    const primaryTooltip = `<Tooltip tooltipStyle="tooltip--primary" content="Hello" position="top">
+const TooltipStory = () => {
+  const primaryTooltip = `<Tooltip tooltipStyle="tooltip--primary" content="Hello" position="top">
    <Button>Easy-UI</Button>
    </Tooltip>`;
 
@@ -13,12 +14,13 @@ const tooltipStory = () => {
   const neutralTooltip = `<Tooltip tooltipStyle="tooltip--neutral" content="Hello" position="top--right">
    <Button>Easy-UI</Button>
    </Tooltip>`;
+
   return (
     <>
-      <h4>
+      <p style={{ fontWeight: 700 }}>
         Props: tooltipStyle, position(top, bottom, right, left, top--right,
         top--left, bottom--left, bottom--right), content
-      </h4>
+      </p>
       <div className="component-container">
         <p className="component-title">Primary</p>
         <Tooltip tooltipStyle="tooltip--primary" content="Hello" position="top">
@@ -52,6 +54,6 @@ const tooltipStory = () => {
       </div>
     </>
   );
-}
+};
 
-export default tooltipStory;
+export default TooltipStory;

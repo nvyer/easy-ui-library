@@ -23,7 +23,9 @@ const StepperStory = () => {
 
   return (
     <div className="component-container">
-      <p>Props: activeStep, error, checked, disabled, id</p>
+      <p style={{ fontWeight: 700 }}>
+        Props: activeStep(zero based index), error, checked, disabled, id
+      </p>
       <p className="component-title">Stepper</p>
       <Stepper activeStep={activeStep}>
         <Step id={1}>

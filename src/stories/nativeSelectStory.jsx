@@ -1,7 +1,8 @@
+import React from "react";
 import NativeSelect from "../components/Select/native-select";
 
-const nativeSelectStory = () => {
-    const primaryNativeSelect = `<NativeSelect>
+const NativeSelectStory = () => {
+  const primaryNativeSelect = `<NativeSelect>
     <option>Google</option>
     <option>FaceBook</option>
   </NativeSelect>`;
@@ -23,10 +24,10 @@ const nativeSelectStory = () => {
 
   return (
     <>
-      <h4>
+      <p style={{ fontWeight: 700 }}>
         Props: onChange, disabled, selectStyle, placeholder, form, multiple,
         name
-      </h4>
+      </p>
       <div className="component-container">
         <p className="component-title">Primary</p>
         <NativeSelect selectStyle="native--select--primary">
@@ -64,7 +65,6 @@ const nativeSelectStory = () => {
       </div>
     </>
   );
-}
+};
 
-
-export default nativeSelectStory;
+export default NativeSelectStory;

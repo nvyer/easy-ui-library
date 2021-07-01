@@ -13,7 +13,9 @@ const LinkStory = () => {
 
   return (
     <div>
-      <p>Props: color, onClick, to</p>
+      <p style={{ fontWeight: 700 }}>
+        Props: color(primary,secondary), onClick, to
+      </p>
       <div className="component-container">
         <p className="component-title">Default</p>
         <Link to={"https://github.com/aca-dec-2020/ui-lib"}>Easy-UI</Link>
