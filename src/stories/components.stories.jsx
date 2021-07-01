@@ -9,9 +9,10 @@ import sliderStory from "./slider";
 import loaderStory from "./loader";
 import textFieldInputStory from "./input";
 
-import "./stories.css";
+import "./styles.css";
 
 const stories = storiesOf("Components", module);
+
 stories.add("Button", buttonStory);
 
 stories.add("DropDown", dropDownStory);
