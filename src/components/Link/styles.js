@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 export const useLinkStyles = createUseStyles({
     link: color => ({
         textDecoration: "none",
+        width: "fit-content",
         fontSize: "20px",
         padding: "10px",
         color: color === "primary" ? "#1DD4CE" : "#2C3E50",
@@ -21,4 +22,4 @@ export const useLinkStyles = createUseStyles({
             textDecorationColor: color === "primary" ? "#1DD4CE" : "#2C3E50",
         }
     })
-})
+});
