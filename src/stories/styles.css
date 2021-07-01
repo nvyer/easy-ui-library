@@ -9,6 +9,10 @@
   padding: 6px;
   width: fit-content;
 }
+.component-title {
+  font-size: 18px;
+  font-family: monospace;
+}
 
 .long {
   width: 1064px;
@@ -18,4 +22,11 @@
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid grey;
+}
+
+.timepicker-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
