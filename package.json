@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": false,
   "main": "dist/index.js",
-  "module" : "dist/index.es.js",
-  "author": "Nvard Yeritsyan, Harutyun Qanaqaryan, Anthony Alexanyan",
+  "module": "dist/index.es.js",
+   "author": "Nvard Yeritsyan, Harutyun Qanaqaryan, Anthony Alexanyan",
   "license": "MIT",
   "dependencies": {
   },
