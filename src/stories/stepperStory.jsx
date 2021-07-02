@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Stepper } from "../components/Stepper/stepper";
 import { Step } from "../components/Stepper/step";
 import { StepLabel } from "../components/Stepper/stepLabel";
-import { StepperConnector } from "../components/Stepper/stepConnector";
+import { StepConnector } from "../components/Stepper/stepConnector";
 import { Button } from "../components/Button/button";
 
 const StepperStory = () => {
@@ -12,11 +12,11 @@ const StepperStory = () => {
       <Step id={1}>
         <StepLabel>Step 1</StepLabel>
       </Step>
-      <StepperConnector />
+      <StepConnector />
       <Step id={2}>
         <StepLabel>Step 2</StepLabel>
       </Step>
-      <StepperConnector />
+      <StepConnector />
       <Step id={3}>
          <StepLabel>Step 3</StepLabel>
       </Step>
@@ -33,11 +33,11 @@ const StepperStory = () => {
         <Step id={1}>
           <StepLabel>Step 1</StepLabel>
         </Step>
-        <StepperConnector />
+        <StepConnector />
         <Step id={2}>
           <StepLabel>Step 2</StepLabel>
         </Step>
-        <StepperConnector />
+        <StepConnector />
         <Step id={3}>
           <StepLabel>Step 3</StepLabel>
         </Step>
