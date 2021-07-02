@@ -1,15 +1,12 @@
 {
-  "name": "ui-library",
+  "name": "easy-ui-lib",
   "version": "1.0.0",
-  "private": true,
-  "main": "index.js",
-  "author": "ACA students",
+  "private": false,
+  "main": "dist/index.js",
+  "module" : "dist/index.es.js",
+  "author": "Nvard Yeritsyan, Harutyun Qanaqaryan, Anthony Alexanyan",
   "license": "MIT",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^12.8.3",
-    "web-vitals": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -71,7 +68,11 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "web-vitals": "^1.1.1"
   },
   "peerDependencies": {
     "react": "^17.0.2",
