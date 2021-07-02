@@ -3,7 +3,7 @@ import Loader from "../components/Loader/loader";
 
 const LoaderStory = () => {
   const primaryLoader = `<Loader color="primary" size="small"/>`;
-  const secondaryLoader = `<Loader color="secondary" size="medium" label/>`;
+  const secondaryLoader = `<Loader color="secondary" size="medium" label="loading..." />`;
   const defaultLoader = `<Loader size="large"/>`;
 
   return (
@@ -24,7 +24,7 @@ const LoaderStory = () => {
       </div>
 
       <div className="component-container">
-        <p className="component-title">Default & Large</p>
+        <p className="component-title">{`Default & Large`}</p>
         <Loader size="large" />
         <pre className="component-code">{defaultLoader}</pre>
       </div>
