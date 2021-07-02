@@ -1,5 +1,5 @@
 export { BreadCrumbs } from "./components/BreadCrumbs/breadcrumbs";
-export { Button } from "./components/Button/Button";
+export { Button } from "./components/Button/button";
 export { CheckBox } from "./components/CheckBox/checkBox";
 export { DropDown } from "./components/DropDown/dropdown";
 export { TextFieldInput } from "./components/Input/Input";
