@@ -91,11 +91,7 @@ export const DropDown = ({
         ) : (
           <div className="dropdown-title">{dropDownTitle}</div>
         )}
-        {search ? (
-          <img src={icon} className="drop-down-icon" />
-        ) : (
-          <img src={icon} className="drop-down-icon" />
-        )}
+        <img src={icon} className="drop-down-icon" />
       </div>
       <div className={`${contentStyle}`} onBlur={handleBlur}>
         {isBloc && renderContent(contentItems)}
