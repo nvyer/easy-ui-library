@@ -1,9 +1,9 @@
 import React from "react";
 import useStyles from "./styles";
-import Table from "./table";
+import { Table } from "./table";
 import PropTypes from "prop-types";
 
-const TablePagination = ({ className, rowsPerPageOptions, nextPageIconClick, onPrevPageonClick, ...props }) => {
+export const TablePagination = ({ className, rowsPerPageOptions, nextPageIconClick, onPrevPageonClick, ...props }) => {
     const classes = useStyles(props);
 
     return (
@@ -47,6 +47,3 @@ TablePagination.propTypes = {
     onPrevPageonClick: PropTypes.func,
     className: PropTypes.string
 };
-
-
-export default TablePagination;

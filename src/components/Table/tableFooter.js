@@ -1,7 +1,7 @@
 import React from "react";
 import useStyles from "./styles";
 
-const TableFooter = ({ children, ...props }) => {
+export const TableFooter = ({ children, ...props }) => {
     const classes = useStyles(props);
     return (
         <div className={classes.tableFooter}>
@@ -9,6 +9,4 @@ const TableFooter = ({ children, ...props }) => {
         </div>
     )
 };
-
-export default TableFooter;
 

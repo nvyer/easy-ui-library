@@ -4,7 +4,7 @@ import "./Input.css";
 import { getClass, getStyle, getHelperClass } from "./styles";
 
 
-const TextFieldInput = ({
+export const TextFieldInput = ({
   className,
   label,
   variant,
@@ -73,4 +73,3 @@ TextFieldInput.propTypes = {
   value: PropTypes.any
 };
 
-export default TextFieldInput;

@@ -11,7 +11,13 @@ const STYLES = [
   "btn--subtle--destructive",
 ];
 
-const Button = ({ children, onClick, buttonStyle, disabled, isLoading }) => {
+export const Button = ({
+  children,
+  onClick,
+  buttonStyle,
+  disabled,
+  isLoading,
+}) => {
   const checkBtnStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
   let checkLoaderStyle;
   switch (buttonStyle) {
@@ -49,5 +55,3 @@ const Button = ({ children, onClick, buttonStyle, disabled, isLoading }) => {
     </button>
   );
 };
-
-export default Button;

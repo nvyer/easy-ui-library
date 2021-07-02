@@ -1,6 +1,6 @@
 import { useStepLabelStyles } from "./styles";
 
-const StepLabel = ({ error, children }) => {
+export const StepLabel = ({ error, children }) => {
     const classes = useStepLabelStyles();
     return (
         <span
@@ -13,5 +13,4 @@ const StepLabel = ({ error, children }) => {
 };
 
 
-export default StepLabel;
 

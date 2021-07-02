@@ -13,7 +13,7 @@ const LoaderSizes = {
     large: "large"
 };
 
-const Loader = ({ size, color, label }) => {
+export const Loader = ({ size, color, label }) => {
     const [sizes, setSizes] = useState({ loaderSize: size, labelSize: "15px" });
 
     useEffect(() => {
@@ -55,5 +55,4 @@ Loader.propTypes = {
     label: PropTypes.string
 };
 
-export default Loader;
 

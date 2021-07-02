@@ -1,5 +1,5 @@
 import React from "react";
-import TimePicker from "../components/TimePicker/timePicker";
+import { TimePicker } from "../components/TimePicker/timePicker";
 
 const TimepickerStory = () => {
   const timePicker = `<TimePicker />`;

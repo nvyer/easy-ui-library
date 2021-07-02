@@ -1,5 +1,5 @@
 import React from "react";
-import DropDown from "../components/DropDown/dropdown";
+import { DropDown } from "../components/DropDown/dropdown";
 
 const DropDownStory = () => {
   const primaryDropDown = `

@@ -1,5 +1,5 @@
 import React from "react";
-import TextFieldInput from "../components/Input/Input";
+import { TextFieldInput } from "../components/Input/Input";
 
 const TextFieldInputStory = () => {
   const standardInput = `<TextFieldInput placeholder="Type text..." variant="standart"/>`;

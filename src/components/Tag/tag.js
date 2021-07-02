@@ -7,7 +7,7 @@ const types = {
     secondary: " #2C3E50"
 };
 
-const Tag = ({ className, placeholder, type }) => {
+export const Tag = ({ className, placeholder, type }) => {
     const [tags, setTags] = useState([]);
 
     const handleRemove = useCallback((el) => setTags(prevState => prevState.filter(tag => tag !== el)), []);
@@ -59,6 +59,4 @@ Tag.defaultProps = {
     type: "primary",
     placeholder: "Type here ..."
 };
-
-export default Tag;
 

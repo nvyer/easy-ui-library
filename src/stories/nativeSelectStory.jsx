@@ -1,5 +1,5 @@
 import React from "react";
-import NativeSelect from "../components/Select/native-select";
+import { NativeSelect } from "../components/Select/native-select";
 
 const NativeSelectStory = () => {
   const primaryNativeSelect = `

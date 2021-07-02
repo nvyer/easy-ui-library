@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Stepper from "../components/Stepper/stepper";
-import Step from "../components/Stepper/step";
-import StepLabel from "../components/Stepper/stepLabel";
-import StepperConnector from "../components/Stepper/stepConnector";
-import Button from "../components/Button/Button";
+import { Stepper } from "../components/Stepper/stepper";
+import { Step } from "../components/Stepper/step";
+import { StepLabel } from "../components/Stepper/stepLabel";
+import { StepperConnector } from "../components/Stepper/stepConnector";
+import { Button } from "../components/Button/Button";
 
 const StepperStory = () => {
   const [activeStep, setActiveStep] = useState(0);

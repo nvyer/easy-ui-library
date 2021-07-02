@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Size } from "./table";
 import useStyles from "./styles";
 
-const TableHead = ({ children, onClick, ...props }) => {
+export const TableHead = ({ children, onClick, ...props }) => {
     const Tablesize = useContext(Size);
 
     props = { ...props, Tablesize }
@@ -16,5 +16,4 @@ const TableHead = ({ children, onClick, ...props }) => {
 
 };
 
-export default TableHead;
 

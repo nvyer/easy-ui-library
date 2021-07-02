@@ -7,7 +7,7 @@ const colorOptions = {
     secondary: "#2C3E50"
 };
 
-const CheckBox = ({ className, color, value, checked, indeterminate, onChange, disabled }) => {
+export const CheckBox = ({ className, color, value, checked, indeterminate, onChange, disabled }) => {
     const [clicked, setClicked] = useState(indeterminate ? true : checked);
     const [currentColor] = useState(colorOptions[color]);
 
@@ -53,5 +53,4 @@ CheckBox.propTypes = {
     value: PropTypes.any
 };
 
-export default CheckBox;
 

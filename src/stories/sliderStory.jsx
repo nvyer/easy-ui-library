@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "../components/Slider/slider";
+import { Slider } from "../components/Slider/slider";
 
 const SliderStory = () => {
   const primarySlider = `<Slider sliderColor="primary"/>`;

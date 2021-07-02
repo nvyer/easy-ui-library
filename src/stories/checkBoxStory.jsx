@@ -1,5 +1,5 @@
 import React from "react";
-import CheckBox from "../components/CheckBox/checkBox";
+import { CheckBox } from "../components/CheckBox/checkBox";
 
 const CheckBoxStory = () => {
   const basicCheckBox = `<CheckBox />`;

@@ -1,5 +1,5 @@
 import React from "react";
-import Badge from "../components/badge/Badge";
+import { Badge } from "../components/badge/Badge";
 
 const BadgeStory = () => {
   const defaultBadge = `<Badge color="#bf73ff" />`;

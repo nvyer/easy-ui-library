@@ -1,5 +1,5 @@
 import React from "react";
-import Loader from "../components/Loader/loader";
+import { Loader } from "../components/Loader/loader";
 
 const LoaderStory = () => {
   const primaryLoader = `<Loader color="primary" size="small"/>`;

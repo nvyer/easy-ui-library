@@ -1,6 +1,6 @@
 import React from "react";
-import Tooltip from "../components/Tooltip/tooltip";
-import Button from "../components/Button/Button";
+import { Tooltip } from "../components/Tooltip/tooltip";
+import { Button } from "../components/Button/Button";
 
 const TooltipStory = () => {
   const primaryTooltip = `

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./slider.css";
 
-const Slider = ({
+export const Slider = ({
   step = 1,
   min = 0,
   max = 100,
@@ -10,7 +10,7 @@ const Slider = ({
   disabled,
   marks,
   label,
-  sliderColor
+  sliderColor,
 }) => {
   const thumbRef = useRef(null);
   const railRef = useRef(null);
@@ -142,5 +142,3 @@ const Slider = ({
     </div>
   );
 };
-
-export default Slider;

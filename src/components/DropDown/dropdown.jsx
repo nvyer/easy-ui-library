@@ -6,7 +6,7 @@ let contentStyle = "";
 let contentItemStyle = "";
 let titleStyle = "";
 
-const DropDown = ({
+export const DropDown = ({
   children,
   dropDownTitle,
   dropDownStyle,
@@ -103,5 +103,3 @@ const DropDown = ({
     </div>
   );
 };
-
-export default DropDown;

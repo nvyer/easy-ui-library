@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import "./select.css";
 
-const Select = ({
+export const Select = ({
   children,
   placeholder,
   value,
@@ -184,5 +184,3 @@ export const GroupOptions = ({ children, title, id }) => {
     </div>
   );
 };
-
-export default Select;

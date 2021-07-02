@@ -19,7 +19,7 @@ const getColor = ({ isDisabled, error }) => {
     }
 };
 
-const Step = ({ error, checked, disabled, id, children }) => {
+export const Step = ({ error, checked, disabled, id, children }) => {
     const [isDisabled, setIsDisabled] = useState(disabled);
     const [isChecked, setIsChecked] = useState(checked);
     const [isActive, setIsActive] = useState();
@@ -74,5 +74,4 @@ Step.propTypes = {
     id: PropTypes.number.isRequired,
 };
 
-export default Step;
 

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Size } from './table';
 import useStyles from "./styles";
 
-const TableBody = ({ children, onClick, ...props }) => {
+export const TableBody = ({ children, onClick, ...props }) => {
     const tablesSize = useContext(Size);
     props = { ...props, tablesSize };
     const classes = useStyles(props);
@@ -12,7 +12,6 @@ const TableBody = ({ children, onClick, ...props }) => {
             {children}
         </div>
     )
-}
+};
 
-export default TableBody;
 

@@ -31,7 +31,7 @@ const badgeSizes = {
 
 const getIcon = (icon) => `${iconTypes[icon]}`;
 
-const Badge = ({ size, rotate, color, icon, badgeContent, onClick }) => (
+export const Badge = ({ size, rotate, color, icon, badgeContent, onClick }) => (
   <div>
     <button className="badge-container" onClick={onClick}>
       <Icon
@@ -60,5 +60,3 @@ Badge.propTypes = {
   color: PropTypes.string,
   onClick: PropTypes.func,
 };
-
-export default Badge;

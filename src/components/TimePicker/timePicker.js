@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useStyles from "./styles";
 import TimeModal from "./timeModal";
 
-const TimePicker = (className, props) => {
+export const TimePicker = (className, props) => {
     const classes = useStyles(props);
     const [inputValue, setInputValue] = useState("");
     const [errorMessage, setErrorMessage] = useState(false);
@@ -84,5 +84,4 @@ const TimePicker = (className, props) => {
     )
 };
 
-export default TimePicker;
 

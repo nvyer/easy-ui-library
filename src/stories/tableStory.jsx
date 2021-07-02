@@ -1,12 +1,12 @@
 import React from "react";
-import TableContainer from "../components/Table/tableContainer";
-import Table from "../components/Table/table";
-import TableHead from "../components/Table/tableHead";
-import TableBody from "../components/Table/tableBody";
-import TableRow from "../components/Table/tableRow";
-import TableCell from "../components/Table/tableCell";
-import TableFooter from "../components/Table/tableFooter";
-import TablePagination from "../components/Table/tablePagination";
+import { TableContainer } from "../components/Table/tableContainer";
+import { Table } from "../components/Table/table";
+import { TableHead } from "../components/Table/tableHead";
+import { TableBody } from "../components/Table/tableBody";
+import { TableRow } from "../components/Table/tableRow";
+import { TableCell } from "../components/Table/tableCell";
+import { TableFooter } from "../components/Table/tableFooter";
+import { TablePagination } from "../components/Table/tablePagination";
 
 const TableStory = () => {
   const table = `

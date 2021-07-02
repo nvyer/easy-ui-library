@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "../components/Link/link";
+import { Link } from "../components/Link/link";
 
 const LinkStory = () => {
   const defaultLink = `<Link to={"https://github.com/aca-dec-2020/ui-lib"}>Easy-UI</Link>`;

@@ -1,7 +1,7 @@
 import React from "react";
 import useStyles from "./styles";
 
-const TableContainer = ({ children, ...props }) => {
+export const TableContainer = ({ children, ...props }) => {
     const classes = useStyles(props);
 
     return (
@@ -9,7 +9,5 @@ const TableContainer = ({ children, ...props }) => {
             {children}
         </div>
     )
-}
-
-export default TableContainer;
+};
 

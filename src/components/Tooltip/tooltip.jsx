@@ -1,7 +1,7 @@
 import "./tooltip.css";
 
-const Tooltip = ({ children, tooltipStyle, position, content }) => {
-  if(!tooltipStyle){
+export const Tooltip = ({ children, tooltipStyle, position, content }) => {
+  if (!tooltipStyle) {
     tooltipStyle = "tooltip--primary";
   }
   return (
@@ -12,5 +12,3 @@ const Tooltip = ({ children, tooltipStyle, position, content }) => {
     </div>
   );
 };
-
-export default Tooltip;

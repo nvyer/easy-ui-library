@@ -5,7 +5,8 @@ const STYLES = [
   "native--select--dark",
   "native--select--normal",
 ];
-const NativeSelect = ({
+
+export const NativeSelect = ({
   children,
   onChange,
   disabled,
@@ -32,5 +33,3 @@ const NativeSelect = ({
     </select>
   );
 };
-
-export default NativeSelect;

@@ -1,5 +1,5 @@
 import React from "react";
-import BreadCrumbs from "../components/BreadCrumbs/breadcrumbs";
+import { BreadCrumbs } from "../components/BreadCrumbs/breadcrumbs";
 
 const BreadCrumbsStory = () => {
   const primaryBreadCrumbs = `

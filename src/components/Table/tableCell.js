@@ -1,7 +1,7 @@
 import React from "react";
 import useStyles from "./styles";
 
-const TableCell = ({ children, onClick, ...props }) => {
+export const TableCell = ({ children, onClick, ...props }) => {
 
     const classes = useStyles(props);
 
@@ -10,7 +10,5 @@ const TableCell = ({ children, onClick, ...props }) => {
             {children}
         </div>
     )
-}
-
-export default TableCell;
+};
 

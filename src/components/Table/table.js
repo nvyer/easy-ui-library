@@ -1,7 +1,7 @@
 import React from "react";
 import useStyles from "./styles";
 
-const Table = ({ children, size, onClick, ...props }) => {
+export const Table = ({ children, size, onClick, ...props }) => {
 
     const classes = useStyles(props);
 
@@ -12,8 +12,7 @@ const Table = ({ children, size, onClick, ...props }) => {
             </Size.Provider>
         </div>
     )
-}
-export const Size = React.createContext(Table);
+};
 
-export default Table;
+export const Size = React.createContext(Table);
 

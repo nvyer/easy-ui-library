@@ -1,5 +1,5 @@
 import React from "react";
-import Tag from "../components/Tag/tag";
+import { Tag } from "../components/Tag/tag";
 
 const TagStory = () => {
   const basicTag = `<Tag />`;

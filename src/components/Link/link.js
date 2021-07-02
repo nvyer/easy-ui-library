@@ -1,7 +1,7 @@
 import React from "react";
 import { useLinkStyles } from "./styles";
 
-const Link = ({ color, onClick, to, children }) => {
+export const Link = ({ color, onClick, to, children }) => {
     const classes = useLinkStyles(color);
     return (
         <a
@@ -17,5 +17,4 @@ Link.defaultProps = {
     color: "primary"
 };
 
-export default Link;
 

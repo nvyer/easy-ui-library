@@ -1,7 +1,7 @@
 import React from "react";
 import { useStepperStyles } from "./styles";
 
-const Stepper = ({ activeStep, children }) => {
+export const Stepper = ({ activeStep, children }) => {
     const classes = useStepperStyles();
     return (
         <div className={classes.stepperContainer}>
@@ -13,5 +13,4 @@ const Stepper = ({ activeStep, children }) => {
 };
 export const CurrentStep = React.createContext(Stepper);
 
-export default Stepper;
 
