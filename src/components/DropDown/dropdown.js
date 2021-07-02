@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./dropdown.css";
-import icon from "./down-arrow-2_icon-icons.com_70191.png";
+
+const dropDownIcon = <svg xmlns="http://www.w3.org/2000/svg" style={{fill : "white"}} width="16" height="16" viewBox="0 -3 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
 
 let contentStyle = "";
 let contentItemStyle = "";
@@ -91,11 +92,7 @@ export const DropDown = ({
         ) : (
           <div className="dropdown-title">{dropDownTitle}</div>
         )}
-        {search ? (
-          <img src={icon} className="drop-down-icon" />
-        ) : (
-          <img src={icon} className="drop-down-icon" />
-        )}
+          <i>{dropDownIcon}</i>
       </div>
       <div className={`${contentStyle}`} onBlur={handleBlur}>
         {isBloc && renderContent(contentItems)}

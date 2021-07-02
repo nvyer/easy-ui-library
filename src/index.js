@@ -1,4 +1,4 @@
-export { BreadCrumbs } from "./components/BreadCrumbs/breadcrumbs";
+export { BreadCrumbs } from "./components/BreadCrumbs/breadcrumbs"
 export { Button } from "./components/Button/button";
 export { CheckBox } from "./components/CheckBox/checkBox";
 export { DropDown } from "./components/DropDown/dropdown";
