@@ -1,9 +1,8 @@
 {
   "name": "easy-ui-lib",
-  "version": "1.0.2",
+  "version": "1.0.25",
   "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "main": "./dist/index.js",
   "author": "Nvard Yeritsyan, Harutyun Qanaqaryan, Anthony Alexanyan",
   "license": "MIT",
   "dependencies": {
@@ -17,7 +16,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "build-lib": "rollup -c"
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/index.js -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +47,12 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-syntax-jsx": "^7.14.5",
+    "@babel/plugin-transform-react-jsx-self": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
     "@mdi/font": "^5.9.55",
     "@mdi/js": "^5.9.55",
     "@mdi/react": "^1.5.0",
@@ -60,6 +65,7 @@
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "babel-loader": "^8.2.2",
     "jss": "^10.6.0",
     "jss-keyframes": "^0.1.0",
     "react": "^17.0.2",
