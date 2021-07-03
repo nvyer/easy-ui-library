@@ -1,4 +1,5 @@
 import { cloneElement, useEffect, useState } from "react";
+import React from "react";
 import "./breadcrumbs.css";
 
 export const BreadCrumbs = ({ children, breadcrumbsStyle, separator, tag }) => {
