@@ -2,7 +2,7 @@ import { createUseStyles } from "react-jss";
 
 export const useCheckBoxStyles = createUseStyles({
     checkBoxContainer: ({ disabled }) => ({
-        display: "block",
+        display: "inline-block",
         padding: "5px",
         width: "fit-content",
         height: "fit-content",

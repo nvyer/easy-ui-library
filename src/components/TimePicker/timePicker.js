@@ -46,7 +46,7 @@ export const TimePicker = (className, props) => {
 
     return (
         <>
-            <div className={className ? className : classes.wrapper}>
+            <div className={`${className ? className : classes.wrapper}`}>
                 <label className={inputValue !== "" ? classes.clickedLabel : classes.label}>{props.label}</label>
                 <div style={{ display: "flex", flexDirection: "row" }}>
                     <input

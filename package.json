@@ -1,6 +1,6 @@
 {
-  "name": "easy-bla",
-  "version": "1.0.4",
+  "name": "easy-ui-react",
+  "version": "1.0.1",
   "private": false,
   "main": "lib/index.js",
   "module": "lib.index.js",

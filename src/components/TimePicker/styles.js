@@ -2,12 +2,11 @@ import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
     wrapper: {
-        display: "flex",
-        flexDirection: "column",
+        display: "inline-block",
         fontFamily: "inherit",
     },
     clickedLabel: {
-        fontSize:"14px",
+        fontSize: "14px",
         width: "82px",
         marginLeft: "6px",
         transition: "color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms"
@@ -96,7 +95,7 @@ export const modalStyles = createUseStyles({
         marginLeft: "5px",
         fontSize: "31px"
     }),
-    minutes : props => ({
+    minutes: props => ({
         color: props.isMinutesClicked ? "white" : "#ffffffa3",
         cursor: "pointer",
         height: "40px",
@@ -104,7 +103,7 @@ export const modalStyles = createUseStyles({
         marginLeft: "5px",
         fontSize: "31px"
     }),
-    AMorPM : {
+    AMorPM: {
         color: "white",
         cursor: "pointer",
         height: "40px",
@@ -153,19 +152,20 @@ export const modalStyles = createUseStyles({
         }
     },
     number: {
+        display: "-webkit-box",
         position: "absolute",
-        width:"fit-content",
-        height:"fit-content",
+        width: "fit-content",
+        height: "fit-content",
         textAlign: "center",
         fontFamily: "sans-serif",
         cursor: "default",
-        pointerEvents:"all",
-        fontSize:"17px",
-        "&:hover" : {
-           fontSize:"20px"
+        pointerEvents: "all",
+        fontSize: "17px",
+        "&:hover": {
+            fontSize: "20px"
         }
     },
-    hand: props => ( {
+    hand: props => ({
         zIndex: 11,
         cursor: "pointer",
         position: "absolute",
@@ -178,7 +178,7 @@ export const modalStyles = createUseStyles({
         transformOrigin: "bottom",
         transform: `rotateZ(${props.rotation}deg)`,
     }),
-    
+
 })
 
 export default useStyles;
