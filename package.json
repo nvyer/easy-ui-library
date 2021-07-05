@@ -1,13 +1,18 @@
 {
-  "name": "easy-ui-lib",
-  "version": "1.0.25",
+  "name": "easy-bla",
+  "version": "1.0.4",
   "private": false,
-  "main": "./dist/index.js",
+  "main": "lib/index.js",
+  "module": "lib.index.js",
   "author": "Nvard Yeritsyan, Harutyun Qanaqaryan, Anthony Alexanyan",
   "license": "MIT",
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-jss": "^10.6.0",
+    "@mdi/js": "^5.9.55",
+    "@mdi/react": "^1.5.0",
+    "@mdi/font": "^5.9.55"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -53,17 +58,11 @@
     "@babel/plugin-transform-react-jsx-self": "^7.14.5",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
-    "@mdi/font": "^5.9.55",
-    "@mdi/js": "^5.9.55",
-    "@mdi/react": "^1.5.0",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
-    "jss": "^10.6.0",
-    "jss-keyframes": "^0.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-jss": "^10.6.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },
