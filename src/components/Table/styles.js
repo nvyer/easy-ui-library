@@ -2,10 +2,12 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
     tableContainer: {
+        display: "inline-block",
         width: "100%",
         maxWidth: "520px",
     },
     table: {
+        display: "inline-block",
         maxHeight: "400px",
         backgroundColor: "#fff",
         flexDirection: "column",

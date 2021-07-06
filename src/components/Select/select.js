@@ -24,12 +24,12 @@ export const Select = ({
   const addOption = (elem) => {
     selectValue.some((el) => el.value === elem)
       ? setSelectValue((prevState) => [
-          ...prevState.filter((el) => el.value !== elem),
-        ])
+        ...prevState.filter((el) => el.value !== elem),
+      ])
       : setSelectValue((prevState) => [
-          ...prevState,
-          { value: elem, selected: true },
-        ]);
+        ...prevState,
+        { value: elem, selected: true },
+      ]);
   };
   const changeSelectValue = (event) => {
     setIsClicked(true);
@@ -148,7 +148,7 @@ export const Select = ({
   };
 
   return (
-    <div value={value} id={id}>
+    <div style={{ display: "inline-block" }} value={value} id={id}>
       <div className="select--primary" tabIndex="0" onBlur={handleBlur}>
         <>
           {isClicked && <p className="placeholder">{placeholder}</p>}
@@ -177,7 +177,7 @@ export const Option = ({ children, id }) => {
   );
 };
 
-export const GroupOptions = ({ children, title, id }) => {
+export const GroupOption = ({ children, title, id }) => {
   return (
     <div title={title} id={id}>
       {children}

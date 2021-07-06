@@ -33,20 +33,22 @@ const badgeSizes = {
 const getIcon = (icon) => `${iconTypes[icon]}`;
 
 export const Badge = ({ size, rotate, color, icon, badgeContent, onClick }) => (
-  <div>
-    <button className="badge-container" onClick={onClick}>
-      <Icon
-        path={getIcon(icon)}
-        size={badgeSizes[size]}
-        horizontal
-        vertical
-        rotate={rotate}
-        color={color}
-      />
-      <span className={`badge-number--${size}`}>
-        {badgeContent > 999 ? "+999" : badgeContent}
-      </span>
-    </button>
+  <div style={{ display: "inline-block" }}>
+    <div style={{ display: "inline-block" }}>
+      <button className="badge-container" onClick={onClick}>
+        <Icon
+          path={getIcon(icon)}
+          size={badgeSizes[size]}
+          horizontal
+          vertical
+          rotate={rotate}
+          color={color}
+        />
+        <span className={`badge-number--${size}`}>
+          {badgeContent > 999 ? "+999" : badgeContent}
+        </span>
+      </button>
+    </div>
   </div>
 );
 

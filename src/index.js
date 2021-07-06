@@ -1,4 +1,4 @@
-export { BreadCrumbs } from "./components/BreadCrumbs/breadcrumbs"
+export { BreadCrumbs } from "./components/BreadCrumbs/breadcrumbs";
 export { Button } from "./components/Button/button";
 export { CheckBox } from "./components/CheckBox/checkBox";
 export { DropDown } from "./components/DropDown/dropdown";
@@ -7,6 +7,7 @@ export { Link } from "./components/Link/link";
 export { Loader } from "./components/Loader/loader";
 export { NativeSelect } from "./components/Select/native-select";
 export { Select } from "./components/Select/select";
+export { Option, GroupOption } from "./components/Select/select";
 export { Slider } from "./components/Slider/slider";
 export { Stepper } from "./components/Stepper/stepper";
 export { Step } from "./components/Stepper/step";
@@ -23,4 +24,4 @@ export { TablePagination } from "./components/Table/tablePagination";
 export { Tag } from "./components/Tag/tag";
 export { TimePicker } from "./components/TimePicker/timePicker";
 export { Tooltip } from "./components/Tooltip/tooltip";
-export { Badge } from "./components/badge/Badge"
+export { Badge } from "./components/badge/Badge";

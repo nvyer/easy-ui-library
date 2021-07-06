@@ -29,27 +29,29 @@ export const TextFieldInput = ({
   useEffect(() => () => { getStyle(placeholder, inputValue, variant) }, [inputValue]);
 
   return (
-    <div className={className ? className : "container"}>
-      <input
-        id={id}
-        value={value}
-        onChange={handleOnChange}
-        type="text"
-        className={getClass(variant, error)}
-        placeholder={placeholder}
-        disabled={disabled}
-        readOnly={readOnly}
-        defaultValue={defaultValue}
-      />
-      <label
-        className={getClass(`${variant}-text`, error)}
-        style={getStyle(placeholder, inputValue, variant)}
-      >
-        {label}
-        {required && " *"}
-      </label>
-      {helperText && <span className={getHelperClass(error)}>{helperText}</span>}
-    </div >
+    <div style={{ display: "inline-block" }}>
+      <div className={className ? className : "container"}>
+        <input
+          id={id}
+          value={value}
+          onChange={handleOnChange}
+          type="text"
+          className={getClass(variant, error)}
+          placeholder={placeholder}
+          disabled={disabled}
+          readOnly={readOnly}
+          defaultValue={defaultValue}
+        />
+        <label
+          className={getClass(`${variant}-text`, error)}
+          style={getStyle(placeholder, inputValue, variant)}
+        >
+          {label}
+          {required && " *"}
+        </label>
+        {helperText && <span className={getHelperClass(error)}>{helperText}</span>}
+      </div >
+    </div>
   )
 };
 

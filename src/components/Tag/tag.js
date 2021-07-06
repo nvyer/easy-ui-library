@@ -26,31 +26,33 @@ export const Tag = ({ className, placeholder, type }) => {
     }, [tags, handleRemove]);
 
     return (
-        <div className={className ? className : "tag-container"}>
-            <ul className="tag-wrapper">
-                {tags.map((el, idx) => (
-                    <li
-                        key={el}
-                        className="tag"
-                        style={{
-                            backgroundColor: `${types[type]}`,
-                        }}>
-                        {el}
-                        <button onClick={() => handleRemove(el)} className="remove-btn">
-                            x
-                        </button>
+        <div style={{ display: "inline-block" }}>
+            <div className={className ? className : "tag-container"}>
+                <ul className="tag-wrapper">
+                    {tags.map((el, idx) => (
+                        <li
+                            key={el}
+                            className="tag"
+                            style={{
+                                backgroundColor: `${types[type]}`,
+                            }}>
+                            {el}
+                            <button onClick={() => handleRemove(el)} className="remove-btn">
+                                x
+                            </button>
+                        </li>
+                    ))}
+                    <li className="main-container">
+                        <input
+                            type="text"
+                            onKeyDown={handleKeyDown}
+                            className="tag-holder"
+                            placeholder={placeholder}
+                        />
                     </li>
-                ))}
-                <li className="main-container">
-                    <input
-                        type="text"
-                        onKeyDown={handleKeyDown}
-                        className="tag-holder"
-                        placeholder={placeholder}
-                    />
-                </li>
-            </ul>
-        </div >
+                </ul>
+            </div >
+        </div>
     );
 };
 

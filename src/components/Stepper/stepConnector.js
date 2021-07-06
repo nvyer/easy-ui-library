@@ -1,3 +1,4 @@
+import React from "react";
 import { useStepConectorStyles } from "./styles";
 
 export const StepConnector = () => {

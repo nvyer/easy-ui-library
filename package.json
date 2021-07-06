@@ -1,9 +1,10 @@
 {
-  "name": "easy-ui-react",
-  "version": "1.0.5",
+  "name": "easy-ui-react-lib",
+  "version": "1.0.0",
+  "homepage": "https://github.com/aca-dec-2020/ui-lib",
   "private": false,
   "main": "lib/index.js",
-  "module": "lib.index.js",
+  "module": "lib/index.js",
   "author": "Nvard Yeritsyan, Harutyun Qanaqaryan, Anthony Alexanyan",
   "license": "MIT",
   "dependencies": {
