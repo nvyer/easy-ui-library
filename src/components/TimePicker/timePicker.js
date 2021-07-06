@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useStyles from "./styles";
 import TimeModal from "./timeModal";
 
-export const TimePicker = (className, props) => {
+export const TimePicker = (props) => {
     const classes = useStyles(props);
     const [inputValue, setInputValue] = useState("");
     const [errorMessage, setErrorMessage] = useState(false);
@@ -46,7 +46,7 @@ export const TimePicker = (className, props) => {
 
     return (
         <>
-            <div className={`${className ? className : classes.wrapper}`}>
+            <div className={classes.wrapper}>
                 <label className={inputValue !== "" ? classes.clickedLabel : classes.label}>{props.label}</label>
                 <div style={{ display: "flex", flexDirection: "row" }}>
                     <input
