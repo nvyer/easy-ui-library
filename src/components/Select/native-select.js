@@ -1,3 +1,4 @@
+import React from "react";
 import "./native-select.css";
 const STYLES = [
   "native--select--primary",

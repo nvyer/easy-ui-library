@@ -42,7 +42,7 @@ const useStyles = createUseStyles({
     tableRow: props => ({
         display: "flex",
         flexDirection: "row",
-        height: props.tablesSize === 'small' ? '13px' : '48px',
+        height: props.tablesSize === "small" ? '13px' : '48px',
         alignItems: "center",
         justifyContent: "space-evenly",
         padding: "10px",

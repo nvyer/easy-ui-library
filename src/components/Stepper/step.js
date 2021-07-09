@@ -19,7 +19,7 @@ const getColor = ({ isDisabled, error }) => {
     }
 };
 
-export const Step = ({ error, checked, disabled, id, children }) => {
+export const Step = ({ className, error, checked, disabled, id, children }) => {
     const [isDisabled, setIsDisabled] = useState(disabled);
     const [isChecked, setIsChecked] = useState(checked);
     const [isActive, setIsActive] = useState();
@@ -55,7 +55,7 @@ export const Step = ({ error, checked, disabled, id, children }) => {
             disabled={isDisabled}
             error={error}
             checked={isChecked}
-            className={classes.step}
+            className={className ? className : classes.step}
             style={{ color: getColor({ isDisabled, error }) }}
         >
             <span className={classes.stepWrapper}>
@@ -72,6 +72,10 @@ export const Step = ({ error, checked, disabled, id, children }) => {
 
 Step.propTypes = {
     id: PropTypes.number.isRequired,
+    error: PropTypes.bool,
+    checked: PropTypes.bool,
+    disabled: PropTypes.bool,
+    className: PropTypes.string
 };
 
 

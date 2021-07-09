@@ -13,7 +13,7 @@ const LoaderSizes = {
     large: "large"
 };
 
-export const Loader = ({ size, color, label }) => {
+export const Loader = ({ className, size, color, label }) => {
     const [sizes, setSizes] = useState({ loaderSize: size, labelSize: "15px" });
 
     useEffect(() => {
@@ -36,7 +36,7 @@ export const Loader = ({ size, color, label }) => {
     const classes = useLoaderStyles({ sizes, loaderColor: colors[color] });
 
     return (
-        <div className={classes.loaderContainer}>
+        <div className={className ? className : classes.loaderContainer}>
             <div className={classes.loader}>
             </div>
             {label && <span

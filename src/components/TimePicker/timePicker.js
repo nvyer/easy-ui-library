@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import Proptypes from "prop-types";
 import useStyles from "./styles";
 import TimeModal from "./timeModal";
 
-export const TimePicker = (props) => {
-    const classes = useStyles(props);
+export const TimePicker = ({ className, label, onChange }) => {
+    const classes = useStyles();
     const [inputValue, setInputValue] = useState("");
     const [errorMessage, setErrorMessage] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,7 +29,7 @@ export const TimePicker = (props) => {
                 } else {
                     setErrorMessage(false);
                 }
-                setInputValue(prevState => prevState + " AM");
+                setInputValue(prevState => prevState + "AM");
             }
             if (value.length === 2) {
                 setInputValue(prevState => prevState + ":");
@@ -46,16 +47,16 @@ export const TimePicker = (props) => {
 
     return (
         <>
-            <div className={classes.wrapper}>
-                <label className={inputValue !== "" ? classes.clickedLabel : classes.label}>{props.label}</label>
-                <div style={{ display: "flex", flexDirection: "row" }}>
+            <div className={className ? className : classes.wrapper}>
+                <label className={inputValue !== "" ? classes.clickedLabel : classes.label}>{label}</label>
+                <div style={{ display: "inline-flex", flexDirection: "row" }}>
                     <input
                         onInput={handleInput}
                         value={inputValue}
                         type='text'
                         onBlur={handleBlur}
                         className={classes.timeInput}
-                        onChange={props.onChange}
+                        onChange={onChange}
                     />
                     <button className={classes.modalButton}>
                         <span className={classes.iconContainer} onClick={openModal}>
@@ -72,7 +73,7 @@ export const TimePicker = (props) => {
                     <TimeModal
                         changeTime={(value) => {
                             setInputValue(value);
-                            props.onChange && props.onChange({ target: { value } });
+                            onChange && onChange({ target: { value } });
                         }}
                         closeModal={setIsModalOpen}
                         time={inputValue.split(' ')[0]}
@@ -84,4 +85,9 @@ export const TimePicker = (props) => {
     )
 };
 
+TimePicker.propTypes = {
+    label: Proptypes.string,
+    className: Proptypes.string,
+    onChange: Proptypes.func
+};
 

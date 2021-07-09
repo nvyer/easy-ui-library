@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useStepLabelStyles } from "./styles";
 
-export const StepLabel = ({ error, children }) => {
+export const StepLabel = ({ className, children }) => {
     const classes = useStepLabelStyles();
     return (
         <span
-            classes={classes.labelContainer}>
+            className={className ? className : classes.labelContainer}>
             <span className={classes.label}>
                 {children}
             </span>
@@ -13,5 +14,7 @@ export const StepLabel = ({ error, children }) => {
     )
 };
 
-
+StepLabel.propTypes = {
+    className: PropTypes.string
+};
 
