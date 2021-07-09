@@ -1,7 +1,10 @@
 {
   "name": "easy-ui-react-lib",
   "version": "1.0.0",
-  "keywords": ["react","library"],
+  "keywords": [
+    "react",
+    "library"
+  ],
   "homepage": "https://github.com/aca-dec-2020/ui-lib",
   "private": false,
   "main": "lib/index.js",
