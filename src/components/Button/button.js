@@ -12,6 +12,7 @@ const STYLES = [
 ];
 
 export const Button = ({
+  className,
   children,
   onClick,
   buttonStyle,
@@ -46,7 +47,7 @@ export const Button = ({
 
   return (
     <button
-      className={`btn ${checkBtnStyle}`}
+      className={className ? className : `btn ${checkBtnStyle}`}
       onClick={onClick}
       disabled={disabled}
     >

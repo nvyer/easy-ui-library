@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import "./select.css";
 
 export const Select = ({
+  className,
   children,
   placeholder,
   value,
@@ -149,7 +150,7 @@ export const Select = ({
 
   return (
     <div style={{ display: "inline-block" }} value={value} id={id}>
-      <div className="select--primary" tabIndex="0" onBlur={handleBlur}>
+      <div className={className ? className : "select--primary"} tabIndex="0" onBlur={handleBlur}>
         <>
           {isClicked && <p className="placeholder">{placeholder}</p>}
           <div className={"select-title--primary"} onClick={openOptions}>

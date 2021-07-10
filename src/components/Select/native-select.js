@@ -8,6 +8,7 @@ const STYLES = [
 ];
 
 export const NativeSelect = ({
+  className,
   children,
   onChange,
   disabled,
@@ -22,7 +23,7 @@ export const NativeSelect = ({
     : STYLES[0];
   return (
     <select
-      className={`native--select ${checkSelectStyle}`}
+      className={className ? className : `native--select ${checkSelectStyle}`}
       onChange={onChange}
       disabled={disabled}
       placeholder={placeholder}

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./slider.css";
 
 export const Slider = ({
+  className,
   step = 1,
   min = 0,
   max = 100,
@@ -103,7 +104,7 @@ export const Slider = ({
     onChange !== undefined && onChange(labelValue);
   }, [labelValue]);
   return (
-    <div className="slider-root">
+    <div className={className ? className : "slider-root"}>
       <span className="slider-line">
         <span className="slider-rail" ref={railRef}></span>
         <span

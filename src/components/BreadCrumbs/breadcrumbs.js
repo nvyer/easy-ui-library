@@ -2,7 +2,7 @@ import { cloneElement, useEffect, useState } from "react";
 import React from "react";
 import "./breadcrumbs.css";
 
-export const BreadCrumbs = ({ children, breadcrumbsStyle, separator, tag }) => {
+export const BreadCrumbs = ({ className, children, breadcrumbsStyle, separator, tag }) => {
   const [isHiddenCrumb, setIsHiddenCrumb] = useState(false);
   const lastItemIndex = children.length - 1;
   const lastItem = children[children.length - 1];
@@ -68,7 +68,7 @@ export const BreadCrumbs = ({ children, breadcrumbsStyle, separator, tag }) => {
   };
 
   return (
-    <nav className="breadcrumbs-container" className={`${breadcrumbsStyle}`}>
+    <nav className={className ? className : `breadcrumbs-container ${breadcrumbsStyle}`}>
       {isHiddenCrumb ? renderCrumbs(children) : renderLongChildren(children)}
     </nav>
   );

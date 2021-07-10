@@ -11,6 +11,7 @@ let contentItemStyle = "";
 let titleStyle = "";
 
 export const DropDown = ({
+  className,
   children,
   dropDownTitle,
   dropDownStyle,
@@ -81,7 +82,7 @@ export const DropDown = ({
     <div
       onClick={hideShowDropDown}
       ref={ref}
-      className={`dropdown ${dropDownStyle}`}
+      className={className ? className : `dropdown ${dropDownStyle}`}
     >
       <div className={`${titleStyle}`}>
         {search ? (
