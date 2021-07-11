@@ -4,7 +4,7 @@ A component library for React applications.
 
 ## Installation
 
-Easy-UI is available as an [npm package]().
+Easy-UI is available as an [npm package](https://www.npmjs.com/package/easy-ui-react-lib).
 
 <pre>
 $ npm i easy-ui-react-lib
@@ -20,6 +20,6 @@ import { Button } from "easy-ui-react-lib";
 
 Please file any development issues or questions with the [Easy-ui](https://github.com/aca-dec-2020/ui-lib) repository.
 
-## Documentation 
+## Documentation
 
 https://nvyer.github.io/easy-ui-web
