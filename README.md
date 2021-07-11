@@ -2,7 +2,9 @@
 
 A component library for React applications.
 
-## Usage
+## Installation
+
+Easy-UI is available as an [npm package]().
 
 <pre>
 $ npm i easy-ui-react-lib
