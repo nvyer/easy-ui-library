@@ -16,10 +16,20 @@ Use named imports with our components
 import { Button } from "easy-ui-react-lib";
 </pre>
 
-## Issues
+## Built With
 
-Please file any development issues or questions with the [Easy-ui](https://github.com/aca-dec-2020/ui-lib) repository.
+- [React](https://reactjs.org/)
+- [React-JSS](https://cssinjs.org/react-jss/?v=v10.7.1)
+- [Material Design Icons](https://github.com/Templarian/MaterialDesign)
 
 ## Documentation
 
 https://nvyer.github.io/easy-ui-web
+
+## Issues
+
+Please file any development issues or questions with the [Easy-ui](https://github.com/aca-dec-2020/ui-lib) repository.
+
+## License
+
+Distributed under the MIT License.
